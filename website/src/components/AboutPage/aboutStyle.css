@@ -1,0 +1,41 @@
+.aboutPageContainer {
+    /* background-color: blue; */
+    margin: 8%;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+.myName {
+    color: #a5c6e9;
+    letter-spacing: 1px;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+.fullStackSentence {
+    /* background-color: aqua; */
+    display: flex;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 3px;
+    align-items: center;
+    height: 50px;
+}
+
+.fullStack {
+    /* background-color: black; */
+    font-size: 45px;
+    letter-spacing: 8px;
+    text-decoration-line: underline;
+    text-decoration-color: #a5c6e9;
+    text-decoration-thickness: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+    align-items: center;
+}
+
+.body {
+    color: white;
+    width: 40%;
+}
+
