@@ -1,0 +1,23 @@
+.navBar {
+    display: flex;
+    margin: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    /* background-color: aliceblue; */
+}
+
+.navLinks {
+    /* background-color: aqua; */
+    /* justify-content: space-between; */
+    display: flex;
+    margin-left: 35%;
+}
+
+.navName {
+    margin-left: 5%;
+}
+
+.linkStyle {
+    margin: 20px;
+    color: white;
+}
