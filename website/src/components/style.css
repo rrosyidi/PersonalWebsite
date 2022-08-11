@@ -1,9 +1,9 @@
 .navBar {
     display: flex;
     margin: 2%;
-    margin-left: 10%;
-    margin-right: 10%;
-    /* background-color: aliceblue; */
+    margin-left: 12%;
+    margin-right: 12%;
+    /* background-color: black; */
 }
 
 .navLinks {
@@ -13,11 +13,17 @@
     margin-left: 35%;
 }
 
-.navName {
-    margin-left: 5%;
-}
+
 
 .linkStyle {
     margin: 20px;
     color: white;
+}
+
+.faceImage {
+    display: flex;
+    margin: 2px;
+    margin-right: 10px;
+    height: 60px;
+    border-radius: 40px;
 }

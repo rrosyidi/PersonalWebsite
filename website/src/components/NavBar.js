@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import face from './Images/faceShot.jpg'
 import "./style.css";
 
 
@@ -16,8 +17,9 @@ const leaveHoverAnimation = (id) => {
 const NavBar = () => {
   return (
     <div className="navBar">
-      <div className="navName">
-        <h2 style={{ color: "white"}}>Ravi Rosyidi</h2>
+        <img src={face} className="faceImage"/>
+      <div >
+        <h3 style={{ color: "white"}}>Ravi Rosyidi</h3>
       </div>
       <div className="navLinks">
         <Link
