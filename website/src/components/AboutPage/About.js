@@ -14,11 +14,11 @@ const TogglePicture = () => {
       src={images[imagesIndex]}
       className="images"
       onMouseOver={() => (
-        (document.getElementById("logo").style.marginTop = "10px"),
+        (document.getElementById("logo").style.marginTop = "1%"),
         (document.getElementById("logo").style.cursor = "pointer")
       )}
       onMouseLeave={() =>
-        (document.getElementById("logo").style.marginTop = "50px")
+        (document.getElementById("logo").style.marginTop = "3.5%")
       }
       onClick={() => cycleImages((imagesIndex + 1) % 3)}
     />
@@ -45,9 +45,9 @@ class About extends Component {
       const logoStyle = document.getElementById("logo").style;
       const bodyStyle = document.getElementById("body").style;
       logoStyle.opacity = "100%";
-      logoStyle.marginTop = "2.5%";
+      logoStyle.marginTop = "3.5%";
       bodyStyle.opacity = "100%";
-      bodyStyle.marginTop = "8%";
+      bodyStyle.marginTop = "10%";
     }, 1500);
     setTimeout(() => {
       const brace = document.getElementById("curlyBrace").style;
