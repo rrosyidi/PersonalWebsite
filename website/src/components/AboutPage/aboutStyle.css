@@ -1,42 +1,107 @@
 .aboutPageContainer {
     /* background-color: blue; */
     margin: 8%;
-    margin-left: 15%;
-    margin-right: 15%;
-    /* background-color: aquamarine; */
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .myName {
-    color: #a5c6e9;
+    color: #a784c4;
     letter-spacing: 1px;
     font-family: Arial;
-    font-size: 15px;
+    font-size: 120%;
+    opacity: 0%;
+    margin-left: -10%;
+    transition: all .4s ease;
 }
 
 .fullStackSentence {
     /* background-color: aqua; */
     display: flex;
     color: white;
-    font-size: 40px;
+    font-size: 90px;
     letter-spacing: 3px;
     align-items: center;
-    height: 50px;
+    height: 60px;
+    opacity: 0%;
+    transition: all 1s ease;
+    margin-top: 20%;
+    width: 70%;
 }
 
 .fullStack {
     /* background-color: black; */
-    font-size: 45px;
-    letter-spacing: 8px;
+    font-size: 110px;
+    letter-spacing: 20px;
     text-decoration-line: underline;
-    text-decoration-color: #a5c6e9;
-    text-decoration-thickness: 5px;
+    text-decoration-color: #a784c4;
+    text-decoration-thickness: 10px;
     margin-left: 30px;
     margin-right: 30px;
     align-items: center;
+    opacity: 0%;
+    transition: all 3s ease;
 }
 
 .body {
     color: white;
-    width: 40%;
+    flex-direction: row;
+    width: 30%;
+    opacity: 0%;
+    margin-top: 40%;
+    transition: all .8s ease;
+    font-size: 140%;
 }
 
+.imageBackground {
+    background-color:'white';
+     position: 'absolute';
+    height:'100px'; 
+    width: '100px';
+    border-radius: '20px';
+    margin-left: '630px';
+}
+
+.images {
+    height: 20%;
+    margin-left: 25%;
+    opacity: 0%;
+    margin-top: 40%;
+    transition: all .8s ease;
+    position: absolute;
+}
+
+.line {
+    /* position: absolute ; */
+    margin-top: 20%;
+    margin-left: -5%;
+    width: 110%;
+    background-color: white;
+}
+
+.bold {
+    color: "#a784c4";
+    font-weight: 'bold';
+    font-size: larger;
+}
+
+.curlyBrace {
+    position: absolute;
+    font-size: 4200%;
+    font-weight: lighter;
+    color: #a784c4;
+    margin-top: -20%;
+    margin-left: 70%;
+    opacity: 0%;
+    transition: all 2s ease;
+}
+
+.aboutMeContainer {
+    margin-top: 20%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.aboutMeTag {
+    color: white;
+}
