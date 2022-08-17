@@ -8,11 +8,14 @@
 .myName {
     color: #a784c4;
     letter-spacing: 1px;
-    font-family: Arial;
-    font-size: 130%;
+    /* font-family: Playfair Display; */
+    font-weight: lighter;
+    font-size: 150%;
     opacity: 0%;
-    margin-left: -10%;
-    transition: all .4s ease;
+    /* margin-left: -10%; */
+    margin-top: 30%;
+    transition: all .8s ease;
+
 }
 
 .fullStackSentence {
@@ -24,8 +27,8 @@
     align-items: center;
     height: 60px;
     opacity: 0%;
-    transition: all 1s ease;
-    margin-top: 20%;
+    transition: all .8s ease;
+    margin-top: 30%;
     width: 70%;
 }
 
@@ -40,7 +43,7 @@
     margin-right: 30px;
     align-items: center;
     opacity: 0%;
-    transition: all 3s ease;
+    transition: all 5s ease;
 }
 
 .body {
@@ -71,6 +74,15 @@
     position: absolute;
 }
 
+.images2 {
+    height: 15%;
+    margin-left: 45%;
+    opacity: 0%;
+    margin-top: 40%;
+    transition: all 1s ease;
+    position: absolute;
+}
+
 .line {
     /* position: absolute ; */
     margin-top: 20%;
@@ -87,22 +99,53 @@
 
 .curlyBrace {
     position: absolute;
-    font-size: 4700%;
-    font-weight: lighter;
-    color: #a784c4;
-    margin-top: -22%;
+    height: 70%;
+    margin-top: -5%;
     margin-left: 70%;
     opacity: 0%;
-    transition: all 2s ease;
-    z-index: 10;
+    transition: all .8s ease;
 }
 
 .aboutMeContainer {
-    margin-top: 20%;
+    margin-top: 30%;
     margin-left: 15%;
     margin-right: 15%;
 }
 
 .aboutMeTag {
+    color: white;
+}
+
+.aboutMeParagraph {
+    color: white;
+    width: 400px;
+}
+
+.contactMe {
+    background-color: transparent;
+    width: 40%;
+    height: 80px;
+    font-size: x-large;
+    margin-left: 30%;
+    margin-top: 12%;
+    color: white;
+    border-radius: 40px;
+    transition: all .8s ease;
+    border-width: 5px;
+    border-color: #a784c4;
+}
+
+.face {
+    height: 300px;
+    margin-left: 10%;
+    border-radius: 20%;
+    background-color: black;
+}
+
+.technologiesSection {
+    margin-top: 35%;
+}
+
+.techHeader {
     color: white;
 }

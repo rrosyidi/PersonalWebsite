@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import face from "./NavBarImages/faceShot.jpg";
+import linkedin from "./NavBarImages/linkedin.png"
 import "./style.css";
 
 const hoverAnimation = (id) => {
@@ -18,7 +19,7 @@ const NavBar = () => {
     <div className="navBar">
       <img
         id="face"
-        src={face}
+        src={linkedin}
         className="faceImage"
         onClick={() =>
           window.open("https://www.linkedin.com/in/ravi-rosyidi-081a84198")
