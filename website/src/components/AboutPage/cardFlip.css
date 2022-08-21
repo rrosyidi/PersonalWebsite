@@ -1,0 +1,23 @@
+.cardContainer {
+    /* background-color: white; */
+    display: flex;
+}
+
+.cardFront {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 250px;
+    background-color: #bf6bf3;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #bf6bf3 40%, #9200ec);
+    font-size: larger;
+    font-weight: bolder;
+    color: white;
+}
+
+.cardBack {
+    /* background: #9200ec; */
+    background: linear-gradient(45deg, #bf6bf3 40%, #9200ec);
+}

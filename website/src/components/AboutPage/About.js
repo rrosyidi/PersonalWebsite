@@ -8,6 +8,7 @@ import backend from "./AboutPageImages/backend.png";
 import website from "./AboutPageImages/websiteDev.png";
 import bracket from "./AboutPageImages/bracket.png";
 import face from "../NavBar/NavBarImages/faceShot.jpg";
+import CardFlip from "./CardFlip.js";
 
 function ToggleLogo(props) {
   const images = [props.img1, props.img2, props.img3];
@@ -20,10 +21,13 @@ function ToggleLogo(props) {
       className="images"
       onMouseOver={() => (
         (document.getElementById("logo").style.marginTop = "1%"),
-        (document.getElementById("logo").style.cursor = "pointer")
+        (document.getElementById("logo").style.cursor = "pointer"),
+        (document.getElementById("logo").style.boxShadow = "0px 0px 15px 1px #b045f2")
       )}
-      onMouseLeave={() =>
-        (document.getElementById("logo").style.marginTop = "3.5%")
+      onMouseLeave={() =>(
+        (document.getElementById("logo").style.marginTop = "3.5%"),
+        (document.getElementById("logo").style.boxShadow = "none")
+      )
       }
       onClick={() => cycleImages((imagesIndex + 1) % 3)}
     />
@@ -42,9 +46,11 @@ function ToggleLogo2(props) {
       onMouseOver={() => (
         (document.getElementById("logo2").style.marginTop = "1%"),
         (document.getElementById("logo2").style.cursor = "pointer")
+        (document.getElementById("logo2").style.boxShadow = "0px 0px 15px 1px #b045f2")
       )}
       onMouseLeave={() =>
         (document.getElementById("logo2").style.marginTop = "3.5%")
+        (document.getElementById("logo2").style.boxShadow = "none")
       }
       onClick={() => cycleImages((imagesIndex + 1) % 3)}
     />
@@ -80,24 +86,26 @@ class About extends Component {
       bodyStyle.marginTop = "10%";
     }, 1300);
     setTimeout(() => {
-      const brace = document.getElementById("curlyBrace").style;
-      brace.marginLeft = "55%";
-      brace.opacity = "100%";
-    }, 1750);
-    setTimeout(() => {
       const fs = document.getElementById("fullstack").style;
       fs.opacity = "100%";
       fs.letterSpacing = "2px";
+
+      const brace = document.getElementById("curlyBrace").style;
+      brace.marginLeft = "55%";
+      brace.opacity = "100%";
     }, 2000);
   }
 
   render() {
     return (
       <div className="aboutPageContainer">
+        <div className="introContainer"> 
+
         {/* Introduction Container */}
         <h5 id="myName" className="myName">
           Hi, my name is Ravi, I am
         </h5>
+        <div style={{marginTop: "-15%"}}>
         <h1 id="sentence" className="fullStackSentence">
           A{" "}
           <h3 id="fullstack" className="fullStack">
@@ -107,9 +115,10 @@ class About extends Component {
           Software Engineer.
         </h1>
 
+        </div>
         {/* Body + Images */}
         <div
-          style={{ display: "flex", alignItems: "center", marginTop: "50px" }}
+          style={{ display: "flex", alignItems: "center", marginTop: "-15%"}}
         >
           <body
             id="body"
@@ -119,21 +128,22 @@ class About extends Component {
             I am an aspiring developer with experience in both frontend and
             backend developement. Some of the technologies that I have recently
             used are{" "}
-            <text style={{ color: "#816797", fontWeight: "bold" }}>
+            <text style={{ color: "#bf96e0", fontWeight: "bold" }}>
               ReactJs/React Native
             </text>{" "}
             ,{" "}
-            <text style={{ color: "#816797", fontWeight: "bold" }}>
+            <text style={{ color: "#bf96e0", fontWeight: "bold" }}>
               Express
             </text>{" "}
-            , <text style={{ color: "#816797", fontWeight: "bold" }}>Jira</text>{" "}
+            , <text style={{ color: "#bf96e0", fontWeight: "bold" }}>Jira</text>{" "}
             , and{" "}
-            <text style={{ color: "#816797", fontWeight: "bold" }}>NodeJs</text>
+            <text style={{ color: "#bf96e0", fontWeight: "bold" }}>NodeJs</text>
             . I'm always on the lookout and open for new opportunities!
           </body>
           <ToggleLogo img1={jira} img2={node} img3={react} />
           <ToggleLogo2 img1={app} img2={backend} img3={website} />
           <img src={bracket} className="curlyBrace" id="curlyBrace" />
+        </div>
         </div>
 
         {/* Line Seperating the Two */}
@@ -170,15 +180,31 @@ class About extends Component {
 
             <img src={face} className="face" />
           </div>
-
         </div>
-
 
         {/* Techonlgies I've had expierenced with */}
         <div className="technologiesSection">
           <h1 className="techHeader">Techonlogies and Skills</h1>
+          <div className="cardFlipColumnContainer">
+            <div className="cardFlipRowContainer">
+              <CardFlip front="React/ReactJs" back="2020-Present" />
+              <CardFlip front="Express" back="2022-Present" />
+              <CardFlip front="React/ReactJs" back="2020-Present" />
+              {/* <CardFlip front="React/ReactJs" back="2020-Present"/> */}
+            </div>
+            <div className="cardFlipRowContainer">
+              <CardFlip front="React/ReactJs" back="2020-Present" />
+              <CardFlip front="React/ReactJs" back="2020-Present" />
+              <CardFlip front="React/ReactJs" back="2020-Present" />
+              {/* <CardFlip front="React/ReactJs" back="2020-Present"/> */}
+            </div>
+          </div>
+
+          <button className="contactMe" onClick={() => window.location = 'mailto:ravi0rwork@gmail.com'}>Contact Me</button>
         </div>
+        {/* background: linear-gradient(97.97deg, rgb(176, 69, 242) 6.26%, rgb(89, 68, 242) 92.64%) text, rgb(176, 69, 242); */}
       </div>
+
     );
   }
 }
