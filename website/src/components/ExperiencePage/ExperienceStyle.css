@@ -1,0 +1,25 @@
+.ExperienceContainer {
+    margin-left: 20%;
+    margin-right: 25%;
+    /* background-color: aqua; */
+}
+
+.header {
+    color: white;
+    font-size: 250%;
+    font-weight: bolder;
+}
+
+.nextLine {
+    width: 15%;
+    height: 10px;
+    margin-top: 2%;
+    margin-left: 0%;
+    border-color: #9200ec;
+    background-color: #9200ec;
+    border-radius: 40px;
+}
+
+.listExperience {
+
+}

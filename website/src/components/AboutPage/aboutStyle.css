@@ -1,118 +1,53 @@
 .aboutPageContainer {
     /* background-color: blue; */
-    margin: 8%;
     margin-left: 20%;
     margin-right: 20%;
 }
 
-.myName {
-    color: white;
-    letter-spacing: 1px;
-    /* font-family: Playfair Display; */
-    font-weight: lighter;
-    font-size: 150%;
-    opacity: 0%;
-    /* margin-left: -10%; */
-    /* margin-top: 30%; */
-    transition: all .8s ease;
-    /* background-color: black; */
-
-}
-
-.fullStackSentence {
-    /* background-color: aqua; */
-    display: flex;
-    color: #b045f2;
-    /* color: transparent;
-    background-image: linear-gradient(180deg, #b045f2, black);
-    background-clip: text; */
-    font-size: 90px;
-    letter-spacing: 2px;
-    align-items: center;
-    /* height: 8%; */
-    opacity: 0%;
-    transition: all .8s ease;
-    width: 102%;
-}
-
-.fullStack {
-    /* background-color: black; */
-    font-size: 110px;
-    letter-spacing: 20px;
-    color: transparent;
+/* color: transparent;
     background-image: linear-gradient(#9200ec, #bf6bf3);
-    /* background-image: linear-gradient(97.97deg, rgb(176, 69, 242) 6.26%, white 32.64%, rgb(176, 69, 242) 50%); */
-    background-clip: text;
-    margin-left: 30px;
-    margin-right: 30px;
-    opacity: 0%;
-    transition: all 5s ease;
-    font-weight: bolder;
+    background-clip: text; */
+
+.raviRosyidi {
+    position: absolute;
+    margin-top: 15%;
+    font-size: 800%;
+    margin-bottom: 0%;
+    letter-spacing: 20px;
+    text-align: center;
+    font-weight: 900;
+    /* background-color: black; */
+    text-shadow: 0px 0px 10px #9200ec;
+    color: white;
+}
+
+.subHeading {
+    position: sticky;
+    text-align: center;
+    color: white;
+    margin-top: 10%;
 }
 
 .body {
+    text-align: center;
     color: white;
-    flex-direction: row;
-    width: 35%;
-    opacity: 0%;
-    margin-top: 40%;
-    transition: all .8s ease;
-    font-size: 140%;
-    background-color: transparent;
+    width: 50%;
+    justify-self: center;
 }
 
-.imageBackground {
-    background-color:'white';
-     position: 'absolute';
-    height:'100px'; 
-    width: '100px';
-    border-radius: '20px';
-    margin-left: '630px';
-}
-
-.images {
-    height: 15%;
-    margin-left: 30%;
-    opacity: 0%;
-    margin-top: 40%;
-    transition: all .8s ease;
-    position: absolute;
-    box-shadow: none;
-    border-radius: 20px;
-}
-
-.images2 {
-    height: 15%;
-    margin-left: 45%;
-    opacity: 0%;
-    margin-top: 40%;
-    transition: all 1s ease;
-    position: absolute;
-    box-shadow: none;
-    border-radius: 20px;
-}
 
 .line {
     /* position: absolute ; */
-    margin-top: 20%;
     margin-left: -5%;
     width: 110%;
     background-color: white;
+    transition: all 10s ease;
 }
 
 .bold {
-    color: "#a784c4";
+    color: #a784c4;
     font-weight: 'bold';
     font-size: larger;
-}
-
-.curlyBrace {
-    position: absolute;
-    height: 70%;
-    margin-top: -5%;
-    margin-left: 70%;
-    opacity: 0%;
-    transition: all 5s ease;
 }
 
 .aboutMeContainer {
@@ -150,11 +85,13 @@
     height: 300px;
     margin-left: 10%;
     border-radius: 20%;
-    box-shadow: 4px 4px 10px 2px #b045f2;
+    box-shadow: 4px 4px 0px 2px #b045f2;
 }
 
 .technologiesSection {
     margin-top: 35%;
+    /* background-color: black; */
+    height: 100vh;
 }
 
 .techHeader {
@@ -178,7 +115,11 @@
     display: flex;
 }
 
-.introContainer {
-    height: 70vh;
+.raviRosyidiContainer {
+    height: 100vh;
     /* background-color: black; */
+    display: grid;
+    align-content: center;
+    justify-content: center;
 }
+

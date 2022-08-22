@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import linkedin from "./NavBarImages/linkedin.png";
 import "./style.css";
 
@@ -13,10 +12,16 @@ const leaveHoverAnimation = (id) => {
   document.getElementById(id).style.fontSize = "120%";
 };
 
-const NavBar = () => {
+const scrollToSection = (ref) => {
+  ref.current.scrollIntoView({ block: "start", behavior: "smooth" });
+};
+
+const NavBar = React.forwardRef((props, ref) => {
+  const {expierence, projects, education } = ref.current;
+
   return (
     <div className="navBar">
-      <div style={{ marginTop: "3%", display: "flex"}}>
+      <div style={{ marginTop: "3%", display: "flex" }}>
         <img
           id="face"
           src={linkedin}
@@ -32,49 +37,57 @@ const NavBar = () => {
           <h3 style={{ color: "white" }}>Ravi Rosyidi</h3>
         </div>
         <div className="navLinks">
-          <Link
+          <button
             id="About"
-            to="/"
             className="linkStyle"
-            style={{ textDecoration: "none", fontWeight: "bold" }}
-            onMouseOver={() => hoverAnimation("About")}
+            onMouseOver={() => (
+              hoverAnimation("About"),
+              (document.getElementById("About").style.cursor = "pointer")
+            )}
             onMouseLeave={() => leaveHoverAnimation("About")}
+            onClick={() => window.scrollTo({top: "1200", behavior: "smooth"})}
           >
             About
-          </Link>
-          <Link
+          </button>
+          <button
             id="Experience"
-            to="/Experience"
             className="linkStyle"
-            style={{ textDecoration: "none", fontWeight: "bold" }}
-            onMouseOver={() => hoverAnimation("Experience")}
+            onMouseOver={() => (
+              hoverAnimation("Experience"),
+              (document.getElementById("Experience").style.cursor = "pointer")
+            )}
             onMouseLeave={() => leaveHoverAnimation("Experience")}
+            onClick={() => scrollToSection(expierence)}
           >
             Experience
-          </Link>
-          <Link
+          </button>
+          <button
             id="Projects"
-            to="/Projects"
             className="linkStyle"
-            style={{ textDecoration: "none", fontWeight: "bold" }}
-            onMouseOver={() => hoverAnimation("Projects")}
+            onMouseOver={() => (
+              hoverAnimation("Projects"),
+              (document.getElementById("Projects").style.cursor = "pointer")
+            )}
             onMouseLeave={() => leaveHoverAnimation("Projects")}
+            onClick={() => scrollToSection(projects)}
           >
             Projects
-          </Link>
-          <Link
+          </button>
+          <button
             id="Education"
-            to="/Education"
             className="linkStyle"
-            style={{ textDecoration: "none", fontWeight: "bold" }}
-            onMouseOver={() => hoverAnimation("Education")}
+            onMouseOver={() => (
+              hoverAnimation("Education"),
+              (document.getElementById("Education").style.cursor = "pointer")
+            )}
             onMouseLeave={() => leaveHoverAnimation("Education")}
+            onClick={() => scrollToSection(education)}
           >
             Education
-          </Link>
+          </button>
         </div>
       </div>
     </div>
   );
-};
+});
 export default NavBar;

@@ -23,12 +23,15 @@ const CardFlip = (props) => {
           flipSpeedBackToFront={0.35}
           flipSpeedFrontToBack={0.35}
         >
-          <div className="cardFront" onMouseOver={flipBack}>
-            {props.front}
+          <div className="card" onMouseOver={flipBack}>
+            <div className="card imgAndText">
+              <img src={props.img} className="img"/>
+              <p>{props.front}</p>
+            </div>
           </div>
 
-          <div className="cardFront cardBack" onMouseLeave={flipFront}>
-            {props.back}
+          <div className="card" onMouseLeave={flipFront}>
+            <p className="backText">{props.back}</p>
           </div>
         </ReactCardFlip>
       </div>
