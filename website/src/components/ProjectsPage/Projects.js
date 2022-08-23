@@ -10,46 +10,14 @@ const Projects = React.forwardRef((props, ref) => {
           <div className="headerContainer">
             <h1 className="projectsHeader">Spot Search</h1>
           </div>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
-          <p>SpotSearch</p>
+          <div className="projBody">
+            <p style={{ wordWrap: "break-word" }}>
+              React Native based application written in javascript that
+              determines best available locations based on user choices such as
+              distance, cost, and type (fast food, restaurant, theme parks,
+              tourist attractions)
+            </p>
+          </div>
         </div>
         <div className="indivProject">
           <div className="headerContainer">
