@@ -1,4 +1,5 @@
 .ExperienceContainer {
+    margin-top: 20%;
     margin-left: 20%;
     margin-right: 25%;
     /* background-color: aqua; */
@@ -11,15 +12,60 @@
 }
 
 .nextLine {
-    width: 15%;
-    height: 10px;
-    margin-top: 2%;
+    width: 10%;
+    height: 2px;
     margin-left: 0%;
     border-color: #9200ec;
     background-color: #9200ec;
     border-radius: 40px;
+    
 }
 
 .listExperience {
+    margin-top: 10%;
+    background-color: #232d3a;
+    border-radius: 30px;
+    box-shadow: 2px 2px 0px 1px #9200ec;
+    margin-bottom: -5%;
+}
 
+.dates {
+    font-size: large;
+    color: white;
+    align-self: center;
+    /* background-color: black; */
+    justify-self: center;
+    width: 20%;
+
+}
+
+.individualSec {
+    display: flex;
+    /* background-color: white; */
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.indivLine {
+    align-self: center;
+    /* margin-left: -20%; */
+}
+
+.expHeaderBody {
+    /* margin-left: 20%; */
+    /* padding-left: 10%; */
+    /* left: 200px; */
+    /* background-color: black; */
+    width: 55%;
+}
+
+.expHeader {
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+}
+
+.expBody {
+    color: white;
+    margin-bottom: 4%;
 }

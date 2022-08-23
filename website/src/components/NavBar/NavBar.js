@@ -13,7 +13,7 @@ const leaveHoverAnimation = (id) => {
 };
 
 const scrollToSection = (ref) => {
-  ref.current.scrollIntoView({ block: "start", behavior: "smooth" });
+  ref.current.scrollIntoView({block: "center", behavior: "smooth" });
 };
 
 const NavBar = React.forwardRef((props, ref) => {

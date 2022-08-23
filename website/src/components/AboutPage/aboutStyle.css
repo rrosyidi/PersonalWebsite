@@ -1,125 +1,124 @@
 .aboutPageContainer {
-    /* background-color: blue; */
-    margin-left: 20%;
-    margin-right: 20%;
+  /* background-color: blue; */
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 /* color: transparent;
     background-image: linear-gradient(#9200ec, #bf6bf3);
     background-clip: text; */
+.raviRosyidiContainer {
+  height: 80vh;
+  /* background-color: black; */
+  /* display: grid; */
+  /* align-content: center; */
+  /* justify-content: center; */
+}
 
 .raviRosyidi {
-    position: absolute;
-    margin-top: 15%;
-    font-size: 800%;
-    margin-bottom: 0%;
-    letter-spacing: 20px;
-    text-align: center;
-    font-weight: 900;
-    /* background-color: black; */
-    text-shadow: 0px 0px 10px #9200ec;
-    color: white;
+  /* position: relative; */
+  padding-top: 5%;
+  font-size: 800%;
+  /* margin-bottom: 0%; */
+  letter-spacing: 20px;
+  text-align: center;
+  font-weight: 900;
+  /* background-color: black; */
+  text-shadow: 0px 0px 10px #9200ec;
+  color: white;
 }
 
 .subHeading {
-    position: sticky;
-    text-align: center;
-    color: white;
-    margin-top: 10%;
+  /* position: sticky; */
+  text-align: center;
+  color: white;
+  /* margin-top: -30%; */
+  /* background-color: black; */
 }
 
 .body {
-    text-align: center;
-    color: white;
-    width: 50%;
-    justify-self: center;
+  text-align: center;
+  color: white;
+  width: 50%;
+  justify-self: center;
 }
 
-
 .line {
-    /* position: absolute ; */
-    margin-left: -5%;
-    width: 110%;
-    background-color: white;
-    transition: all 10s ease;
+  /* position: absolute ; */
+  margin-left: -5%;
+  width: 110%;
+  background-color: white;
+  transition: all 10s ease;
 }
 
 .bold {
-    color: #a784c4;
-    font-weight: 'bold';
-    font-size: larger;
+  color: #a784c4;
+  font-weight: "bold";
+  font-size: larger;
 }
 
 .aboutMeContainer {
-    margin-top: 30%;
-    margin-left: 15%;
-    margin-right: 15%;
+  margin-top: 30%;
+  margin-left: 15%;
+  margin-right: 15%;
+  /* background-color: black; */
 }
 
 .aboutMeTag {
-    color: white;
+  color: white;
 }
 
 .aboutMeParagraph {
-    color: white;
-    width: 400px;
-    background-color: transparent;
+  color: white;
+  width: 400px;
+  background-color: transparent;
 }
 
 .contactMe {
-    background-color: transparent;
-    width: 40%;
-    height: 80px;
-    font-size: x-large;
-    margin-left: 30%;
-    margin-top: 12%;
-    color: white;
-    border-radius: 40px;
-    transition: all .8s ease;
-    border-width: 5px;
-    border-color: #a784c4;
-    margin-bottom: 10%;
+  background-color: transparent;
+  width: 40%;
+  height: 80px;
+  font-size: x-large;
+  margin-left: 30%;
+  margin-top: 12%;
+  color: white;
+  border-radius: 40px;
+  transition: all 0.8s ease;
+  border-width: 5px;
+  border-color: #a784c4;
+  margin-bottom: 10%;
 }
 
 .face {
-    height: 300px;
-    margin-left: 10%;
-    border-radius: 20%;
-    box-shadow: 4px 4px 0px 2px #b045f2;
+  height: 300px;
+  margin-left: 10%;
+  border-radius: 20%;
+  box-shadow: 4px 4px 0px 2px #9200ec;
 }
 
 .technologiesSection {
-    margin-top: 35%;
-    /* background-color: black; */
-    height: 100vh;
+  margin-top: 30%;
+  /* background-color: black; */
+  /* height: 150vh; */
 }
 
 .techHeader {
-    color: white;
-    display: flex;
-    justify-content: center;
-    /* background-color: black; */
+  color: white;
+  display: flex;
+  justify-content: center;
+  /* background-color: black; */
 }
 
 .cardFlipColumnContainer {
-    width: 100%;
-    height: 650px;
-    margin-top: 5%;
-    /* background-color: black; */
-    display: grid;
-    justify-content: center;
-    flex-direction: row;
+  width: 100%;
+  height: 650px;
+  margin-top: 5%;
+  /* background-color: black; */
+  display: grid;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .cardFlipRowContainer {
-    display: flex;
+  display: flex;
 }
-
-.raviRosyidiContainer {
-    height: 100vh;
-    /* background-color: black; */
-    display: grid;
-    align-content: center;
-    justify-content: center;
-}
-

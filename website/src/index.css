@@ -15,3 +15,17 @@ code {
     monospace;
 }
 
+.contactMe {
+  background-color: transparent;
+  width: 40%;
+  height: 80px;
+  font-size: x-large;
+  margin-left: 30%;
+  margin-top: 12%;
+  color: white;
+  border-radius: 40px;
+  transition: all .8s ease;
+  border-width: 5px;
+  border-color: #a784c4;
+  margin-bottom: 10%;
+}

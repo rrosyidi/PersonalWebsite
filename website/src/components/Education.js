@@ -1,15 +1,5 @@
 import React, { Component } from 'react';
 
-// class Education extends Component {
-//     render() {
-//         return (
-//             <div>
-//                 <h1>Education Page</h1>
-//             </div>
-//         );
-//     }
-// }
-
 const Education = React.forwardRef((props, ref) => {
     return (
         <div ref={ref}>

@@ -1,9 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import About from "./components/AboutPage/About";
 import Education from "./components/Education";
 import Experience from "./components/ExperiencePage/Experience";
-import Projects from "./components/Projects";
+import Projects from "./components/ProjectsPage/Projects";
 import { useRef } from "react";
 
 function App() {
@@ -20,6 +19,12 @@ function App() {
         <Experience ref={expierence}/>
         <Projects ref={projects}/>
         <Education ref={education}/>
+        <button
+            className="contactMe"
+            onClick={() => (window.location = "mailto:ravi0rwork@gmail.com")}
+          >
+            Contact Me 
+          </button>
     </div>
   );
 }

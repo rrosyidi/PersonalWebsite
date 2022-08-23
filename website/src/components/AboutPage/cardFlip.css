@@ -13,7 +13,8 @@
     width: 250px;
     /* background-color: #bf6bf3; */
     border-radius: 20px;
-    background: linear-gradient(290deg, white -20%, #9200ec);
+    background: linear-gradient(135deg, white -25%, #9200ec);
+    /* box-shadow: 4px 4px 0px 2px #232d3a; */
 }
 
 .img {
@@ -23,14 +24,14 @@
 .imgAndText {
     flex-direction: column;
     font-size: larger;
-    font-weight: bolder;
+    font-weight: 900;
     letter-spacing: 2px;
-    color: black;
+    color: white;
 }
 
 .backText {
     font-size: larger;
     font-weight: bolder;
     letter-spacing: 2px;
-    color: black;
+    color: white;
 }

@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, createRef, useState } from "react";
 import "./aboutStyle.css";
 import jira from "./AboutPageImages/Jira.png";
 import node from "./AboutPageImages/Node.png";
@@ -11,33 +11,33 @@ import python from "./AboutPageImages/python.png";
 import CardFlip from "./CardFlip.js";
 
 class About extends Component {
+  constructor(props) {
+    super(props);
+    this.introName = createRef();
+    this.subHeading = createRef();
+  }
+
   componentDidMount() {
     setTimeout(() => {
-      const name = document.getElementById("name").style;
-      name.marginTop = "50%";
-      name.opacity = "0%";
+      this.introName.current.style.marginTop = "50%";
+      this.introName.current.style.opacity = "0%";
 
-      const subName = document.getElementById("subheading").style;
-      subName.marginTop = "200%";
-      subName.opacity = "0%";
+      this.subHeading.current.style.marginTop = "0%";
+      this.subHeading.current.style.opacity = "0%";
     }, 0);
     setTimeout(() => {
-      const name = document.getElementById("name").style;
-      name.transition = "all .3s ease-in";
-      name.marginTop = "15%";
+      this.introName.current.style.transition = "all .4s ease-in";
+      this.introName.current.style.marginTop = "15%";
     }, 750);
     setTimeout(() => {
-      const subName = document.getElementById("subheading").style;
-      subName.transition = "all .3s ease-in";
-      subName.marginTop = "10%";
+      this.subHeading.current.style.transition = "all .4s ease-in";
+      this.subHeading.current.style.marginTop = "-5%";
     }, 900);
     setTimeout(() => {
-      const name = document.getElementById("name").style;
-      name.opacity = "100%";
+      this.introName.current.style.opacity = "100%";
     }, 950);
     setTimeout(() => {
-      const subName = document.getElementById("subheading").style;
-      subName.opacity = "100%";
+      this.subHeading.current.style.opacity = "100%";
     }, 1100);
   }
 
@@ -45,10 +45,10 @@ class About extends Component {
     return (
       <div className="aboutPageContainer" ref={this.props.forwardRef}>
         <div className="raviRosyidiContainer">
-          <h1 id="name" className="raviRosyidi">
+          <h1 ref={this.introName} className="raviRosyidi">
             RAVI ROSYIDI
           </h1>
-          <h2 id="subheading" className="subHeading">
+          <h2 ref={this.subHeading} className="subHeading">
             Full-Stack Software Engineer | New Grad
           </h2>
         </div>
@@ -66,7 +66,7 @@ class About extends Component {
             <p className="aboutMeParagraph">
               I am an aspiring developer with experience in both frontend and
               backend developement. Some of the technologies that I have
-              recently used are ReactJs/React Native , Express , Jira , and
+              recently used are ReactJs/React Native, Express, Jira, and
               NodeJs.
               <p className="aboutMeParagraph" style={{ marginTop: "20px" }}>
                 I was born in Jakarta, Indonesia currently living in the state

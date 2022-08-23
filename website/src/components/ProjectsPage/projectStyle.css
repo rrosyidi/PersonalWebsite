@@ -1,0 +1,57 @@
+.projectsPageContainer {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 25%;
+    /* background-color: green; */
+}
+
+.projectContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.projectsTitle {
+    color: white;
+    font-size: 250%;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectsHeader {
+    color: white;
+    font-size: 150%;
+    /* margin: 10%; */
+    /* background: linear-gradient(-45deg, white, #9200ec); */
+    border-radius: 30px;
+}
+
+.headerContainer {
+    width: 100%;
+    background: linear-gradient(-45deg, white -80%, #9200ec);
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indivProject {
+    width: 30%;
+    height: 700px;
+    background-color: #232d3a;
+    /* background: linear-gradient(-45deg, white, #9200ec); */
+    text-align: center;
+    margin: 2%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border-radius: 30px;
+    box-shadow: 2px 2px 0px 1px #9200ec;
+}
+
+.indivProject::-webkit-scrollbar {
+    display: none;
+}

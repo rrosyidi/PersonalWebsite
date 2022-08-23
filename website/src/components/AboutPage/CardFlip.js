@@ -23,7 +23,7 @@ const CardFlip = (props) => {
           flipSpeedBackToFront={0.35}
           flipSpeedFrontToBack={0.35}
         >
-          <div className="card" onMouseOver={flipBack}>
+          <div className="card" onMouseEnter={flipBack}>
             <div className="card imgAndText">
               <img src={props.img} className="img"/>
               <p>{props.front}</p>
