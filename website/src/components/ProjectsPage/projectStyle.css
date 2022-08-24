@@ -1,65 +1,165 @@
 .projectsPageContainer {
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 25%;
-    /* background-color: green; */
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 25%;
+  /* background-color: green; */
 }
 
 .projectContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
 }
 
 .projectsTitle {
-    color: white;
-    font-size: 250%;
-    font-weight: bolder;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  color: white;
+  font-size: 250%;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .projectsHeader {
-    color: white;
-    font-size: 150%;
-    /* margin: 10%; */
-    /* background: linear-gradient(-45deg, white, #9200ec); */
-    border-radius: 30px;
+  color: white;
+  font-size: 150%;
+  /* margin: 10%; */
+  /* background: linear-gradient(-45deg, white, #9200ec); */
+  border-radius: 30px;
 }
 
 .headerContainer {
-    width: 100%;
-    background: linear-gradient(-45deg, white -80%, #9200ec);
-    height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  background: linear-gradient(-45deg, white -80%, #9200ec);
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: sticky; */
+  top: 0;
+  /* border-radius: 30px; */
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .indivProject {
-    width: 30%;
-    height: 700px;
-    background-color: #232d3a;
-    /* background: linear-gradient(-45deg, white, #9200ec); */
-    text-align: center;
-    margin: 2%;
+  width: 30%;
+  height: 700px;
+  background-color: #232d3a;
+  /* background: linear-gradient(-45deg, white, #9200ec); */
+  text-align: center;
+  margin: 2%;
+  /* overflow-y: scroll; */
+  /* -ms-overflow-style: none;
+  scrollbar-width: none; */
+  border-radius: 30px;
+  /* box-shadow: 2px 2px 0px 1px #9200ec; */
+}
+
+.projBody {
+  width: 80%;
+  /* background-color: white; */
+  color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 100%;
+  font-weight: 600;
+}
+
+.projImage {
+  width: 80%;
+  border-radius: 20px;
+  margin-top: 5%;
+  /* box-shadow: 2px 2px 0px 1px #9200ec; */
+  margin-bottom: 5%;
+}
+
+.projImageHappiness {
+    width: 150%;
+    height: 150%;
+}
+
+.projImageCarbon {
+    width: 200%;
+    height: 200%;
+}
+
+.introImage {
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.projLine {
+  /* border-color: #9200ec; */
+  background-color: #9200ec;
+  background-color: white;
+  border-width: 0;
+  height: 2px;
+  border-radius: 20px;
+  margin-top: 6%;
+}
+
+.projButton {
+    margin-top: 15%;
+  background-color: transparent;
+  width: 70%;
+  height: 10%;
+  font-size: large;
+  color: white;
+  border-radius: 40px;
+  border-width: 5px;
+  border-color: white;
+  margin-bottom: 10%;
+}
+
+.imagesBesideFirst {
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.bodyScroll {
     overflow-y: scroll;
-    /* -ms-overflow-style: none; */
-    /* scrollbar-width: none; */
-    border-radius: 30px;
-    box-shadow: 2px 2px 0px 1px #9200ec;
+    height: 80%;
+}
+
+.bodyScroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.bodyScroll::-webkit-scrollbar-track {
+    background: #232d3a;
+}
+
+.bodyScroll::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 20px;
+}
+
+.imageScroll {
+    display: flex;
+    overflow-x: scroll;
+    /* background-color: black; */
 }
 
 .indivProject::-webkit-scrollbar {
     display: none;
+    /* width: 10px;
+    height: 10px; */
 }
 
-.projBody {
-    width: 80%;
-    /* background-color: white; */
-    color: white;
-    margin-left: 10%;
-    margin-right: 10%;
+.imageScroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    /* margin-top: 40px; */
+}
+
+.imageScroll::-webkit-scrollbar-track {
+    background: #232d3a;
+}
+
+.imageScroll::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 20px;
 }
