@@ -1,86 +1,82 @@
-import React from "react";
+import React, { useRef } from "react";
 import linkedin from "./NavBarImages/linkedin.png";
 import "./style.css";
 
-const hoverAnimation = (id) => {
-  document.getElementById(id).style.transition = "all .4s ease";
-  document.getElementById(id).style.fontSize = "160%";
+const hoverAnimation = (ref) => {
+  ref.current.style.transition = "all .4s ease";
+  ref.current.style.fontSize = "160%";
+  ref.current.style.cursor = "pointer";
 };
 
-const leaveHoverAnimation = (id) => {
-  document.getElementById(id).style.textDecoration = "none";
-  document.getElementById(id).style.fontSize = "120%";
+const leaveHoverAnimation = (ref) => {
+  ref.current.style.fontSize = "120%";
 };
 
 const scrollToSection = (ref) => {
-  ref.current.scrollIntoView({block: "center", behavior: "smooth" });
+  ref.current.scrollIntoView({ block: "center", behavior: "smooth" });
 };
 
 const NavBar = React.forwardRef((props, ref) => {
-  const {expierence, projects, education } = ref.current;
+  const { expierence, projects, education } = ref.current;
+  const lnk = useRef();
+  const aboutRef = useRef();
+  const expRef = useRef();
+  const projRef = useRef();
+  const eduRef = useRef();
 
   return (
     <div className="navBar">
+
       <div style={{ marginTop: "3%", display: "flex" }}>
+
+        {/* Linkedin Link + Name */}
         <img
-          id="face"
+          ref={lnk}
           src={linkedin}
           className="faceImage"
           onClick={() =>
             window.open("https://www.linkedin.com/in/ravi-rosyidi-081a84198")
           }
-          onMouseOver={() =>
-            (document.getElementById("face").style.cursor = "pointer")
-          }
+          onMouseOver={() => (lnk.current.style.cursor = "pointer")}
         />
         <div>
           <h3 style={{ color: "white" }}>Ravi Rosyidi</h3>
         </div>
+
+        {/* Navigational Links */}
         <div className="navLinks">
           <button
-            id="About"
+            ref={aboutRef}
             className="linkStyle"
-            onMouseOver={() => (
-              hoverAnimation("About"),
-              (document.getElementById("About").style.cursor = "pointer")
-            )}
-            onMouseLeave={() => leaveHoverAnimation("About")}
-            onClick={() => window.scrollTo({top: "1200", behavior: "smooth"})}
+            onMouseOver={() => hoverAnimation(aboutRef)}
+            onMouseLeave={() => leaveHoverAnimation(aboutRef)}
+            onClick={() => window.scrollTo({ top: "1200", behavior: "smooth" })}
           >
             About
           </button>
           <button
-            id="Experience"
+            ref={expRef}
             className="linkStyle"
-            onMouseOver={() => (
-              hoverAnimation("Experience"),
-              (document.getElementById("Experience").style.cursor = "pointer")
-            )}
-            onMouseLeave={() => leaveHoverAnimation("Experience")}
+            onMouseOver={() => hoverAnimation(expRef)}
+            onMouseLeave={() => leaveHoverAnimation(expRef)}
             onClick={() => scrollToSection(expierence)}
           >
             Experience
           </button>
           <button
-            id="Projects"
+            ref={projRef}
             className="linkStyle"
-            onMouseOver={() => (
-              hoverAnimation("Projects"),
-              (document.getElementById("Projects").style.cursor = "pointer")
-            )}
-            onMouseLeave={() => leaveHoverAnimation("Projects")}
+            onMouseOver={() => hoverAnimation(projRef)}
+            onMouseLeave={() => leaveHoverAnimation(projRef)}
             onClick={() => scrollToSection(projects)}
           >
             Projects
           </button>
           <button
-            id="Education"
+            ref={eduRef}
             className="linkStyle"
-            onMouseOver={() => (
-              hoverAnimation("Education"),
-              (document.getElementById("Education").style.cursor = "pointer")
-            )}
-            onMouseLeave={() => leaveHoverAnimation("Education")}
+            onMouseOver={() => hoverAnimation(eduRef)}
+            onMouseLeave={() => leaveHoverAnimation(eduRef)}
             onClick={() => scrollToSection(education)}
           >
             Education

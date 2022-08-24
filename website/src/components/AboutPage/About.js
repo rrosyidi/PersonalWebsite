@@ -58,7 +58,7 @@ class About extends Component {
 
         {/* About Me Container */}
         <div className="aboutMeContainer">
-          <h1 className="aboutMeTag">About Me.</h1>
+          <h1 className="aboutMeTag">About Me</h1>
           {/* <hr /> */}
 
           {/* About me paragraphs */}
@@ -95,6 +95,8 @@ class About extends Component {
         {/* Techonlgies I've had expierenced with */}
         <div className="technologiesSection">
           <h1 className="techHeader">Notable Techonlogies and Skills</h1>
+
+          {/* Cards */}
           <div className="cardFlipColumnContainer">
             <div className="cardFlipRowContainer">
               <CardFlip
@@ -113,13 +115,7 @@ class About extends Component {
               {/* <CardFlip front="React/ReactJs" back="2020-Present"/> */}
             </div>
           </div>
-
-          {/* <button
-            className="contactMe"
-            onClick={() => (window.location = "mailto:ravi0rwork@gmail.com")}
-          >
-            Contact Me
-          </button> */}
+          
         </div>
         {/* background: linear-gradient(97.97deg, rgb(176, 69, 242) 6.26%, rgb(89, 68, 242) 92.64%) text, rgb(176, 69, 242); */}
       </div>
