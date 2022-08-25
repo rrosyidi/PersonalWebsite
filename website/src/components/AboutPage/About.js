@@ -19,8 +19,6 @@ class About extends Component {
   }
 
   componentDidMount() {
-    console.log("Width: ", window.innerWidth);
-    console.log("Height: ", window.innerHeight);
     setTimeout(() => {
       this.introName.current.style.marginTop = "100%";
       this.introName.current.style.opacity = "0%";
@@ -33,7 +31,7 @@ class About extends Component {
     setTimeout(() => {
       this.subHeading.current.style.marginTop = "50%";
       this.subHeading.current.style.transition = "all .4s ease-in";
-      this.subHeading.current.style.marginTop = "0%";
+      this.subHeading.current.style.marginTop = "-7%";
     }, 900);
     setTimeout(() => {
       this.introName.current.style.opacity = "100%";

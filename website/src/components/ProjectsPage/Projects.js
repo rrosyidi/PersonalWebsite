@@ -33,7 +33,7 @@ const CreateProjectSpotlight = (props) => {
 
       <div className="bodyScroll">
         <div className="projBody">
-          <p style={{ wordWrap: "break-word" }}>{props.data.mainInfo}</p>
+          <p style={{ wordWrap: "break-word", fontSize: "1vw"}}>{props.data.mainInfo}</p>
           <img
             className="projImage introImage"
             src={props.mainImg}
@@ -41,10 +41,10 @@ const CreateProjectSpotlight = (props) => {
           />
           <hr className="projLine" />
           {props.data.extraInfo.map((info, index) => (
-            <p style={{ wordWrap: "break-word" }} key={index}>{info}</p>
+            <p style={{ wordWrap: "break-word", fontSize: "1vw"}} key={index}>{info}</p>
           ))}
           <hr className="projLine" />
-          <h2>ScreenShots</h2>
+          <h2 style={{fontSize: "1.25vw"}}>ScreenShots</h2>
           <div className="imageScroll">
             {props.scrollImages.map((img, index) => (
               <img

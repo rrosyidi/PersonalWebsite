@@ -4,16 +4,16 @@ import "./style.css";
 
 const hoverAnimation = (ref) => {
   ref.current.style.transition = "all .4s ease";
-  ref.current.style.fontSize = "160%";
+  ref.current.style.fontSize = "1.3vw";
   ref.current.style.cursor = "pointer";
 };
 
 const leaveHoverAnimation = (ref) => {
-  ref.current.style.fontSize = "110%";
+  ref.current.style.fontSize = "1vw";
 };
 
 const scrollToSection = (ref) => {
-  ref.current.scrollIntoView({behavior: "smooth" });
+  ref.current.scrollIntoView({block:"center", behavior: "smooth"});
 };
 
 const NavBar = React.forwardRef((props, ref) => {

@@ -9,8 +9,8 @@
     justify-content: center;
     align-items: center;
     justify-content: center;
-    height: 250px;
-    width: 250px;
+    height: 13vw;
+    width: 13vw;
     /* background-color: #bf6bf3; */
     border-radius: 20px;
     background: linear-gradient(135deg, white -25%, #9200ec);
@@ -18,7 +18,7 @@
 }
 
 .img {
-    height: 50%;
+    height: 7vw;
 }
 
 .imgAndText {
@@ -29,8 +29,8 @@
     color: white;
 }
 
-.backText {
-    font-size: larger;
+.frontBackText {
+    font-size: 1vw;
     font-weight: bolder;
     letter-spacing: 2px;
     color: white;

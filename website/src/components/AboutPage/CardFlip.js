@@ -26,12 +26,12 @@ const CardFlip = (props) => {
           <div className="card" onMouseEnter={flipBack}>
             <div className="card imgAndText">
               <img src={props.img} className="img"/>
-              <p>{props.front}</p>
+              <p className="frontBackText">{props.front}</p>
             </div>
           </div>
 
           <div className="card" onMouseLeave={flipFront}>
-            <p className="backText">{props.back}</p>
+            <p className="frontBackText">{props.back}</p>
           </div>
         </ReactCardFlip>
       </div>
