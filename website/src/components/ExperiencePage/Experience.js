@@ -20,7 +20,7 @@ const Experience = React.forwardRef((props, ref) => {
       company: "Montgomery College",
       meta: [
         "Helped teach/create classwork which includes exam study guides and projects which were used throughout the semester and the next.",
-        "Additionally held weekly tutoring sessions outside the class."
+        "Additionally held weekly tutoring sessions outside the class.",
       ]
     },
     {

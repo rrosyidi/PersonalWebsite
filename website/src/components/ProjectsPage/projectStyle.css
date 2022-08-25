@@ -126,8 +126,8 @@
 }
 
 .bodyScroll::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 1vh;
+    height: 1vh;
 }
 
 .bodyScroll::-webkit-scrollbar-track {
@@ -152,8 +152,8 @@
 }
 
 .imageScroll::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 1vh;
+    height: 1vh;
     /* margin-top: 40px; */
 }
 
