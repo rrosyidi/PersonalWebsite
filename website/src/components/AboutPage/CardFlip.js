@@ -16,7 +16,7 @@ const CardFlip = (props) => {
 
   return (
     <div className="cardContainer">
-      <div style={{ margin: "40px" }}>
+      <div style={{ margin: "25px" }}>
         <ReactCardFlip
           isFlipped={flip}
           flipDirection="vertical"
