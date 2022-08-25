@@ -4,12 +4,12 @@ import "./style.css";
 
 const hoverAnimation = (ref) => {
   ref.current.style.transition = "all .4s ease";
-  ref.current.style.fontSize = "1.3vw";
+  ref.current.style.fontSize = "1.6vw";
   ref.current.style.cursor = "pointer";
 };
 
 const leaveHoverAnimation = (ref) => {
-  ref.current.style.fontSize = "1vw";
+  ref.current.style.fontSize = "1.2vw";
 };
 
 const scrollToSection = (ref) => {
@@ -23,6 +23,8 @@ const NavBar = React.forwardRef((props, ref) => {
   const expRef = useRef();
   const projRef = useRef();
   const eduRef = useRef();
+
+  const twoHeight = window.innerHeight*1.3;
 
   return (
 
@@ -52,7 +54,7 @@ const NavBar = React.forwardRef((props, ref) => {
             className="linkStyle"
             onMouseOver={() => hoverAnimation(aboutRef)}
             onMouseLeave={() => leaveHoverAnimation(aboutRef)}
-            onClick={() => window.scrollTo({ top: "1200", behavior: "smooth" })}
+            onClick={() => window.scrollTo({ top: twoHeight, behavior: "smooth" })}
           >
             About
           </button>

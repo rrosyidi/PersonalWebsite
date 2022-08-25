@@ -55,8 +55,8 @@
 
 .aboutMeContainer {
   margin-top: 30%;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 15%;
+  margin-right: 15%;
   /* height: 100vh; */
   /* background-color: black; */
 }
@@ -78,7 +78,7 @@
 
 .aboutMeParagraph {
   color: white;
-  font-size: .8vw;
+  font-size: .95vw;
   /* margin-top: 10%; */
   /* width: 50%; */
   /* background-color: green; */
@@ -88,7 +88,8 @@
   /* background-color: white; */
   width: 40%;
   display: flex;
-  margin-right: 5%;
+  /* margin-right: 5%; */
+  margin-left: 5%;
   align-content: center;
   justify-content: center;
 }

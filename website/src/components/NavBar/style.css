@@ -12,7 +12,7 @@
     color: white;
     width: 100%;
     /* font-size: 110%; */
-    font-size: .92vw;
+    font-size: 1.2vw;
     align-self: center;
 }
 
@@ -39,7 +39,7 @@
 .linkStyle {
     margin: 1vw;
     color: white;
-    font-size: 1vw;
+    font-size: 1.2vw;
     /* font-size: 10px; */
     background-color: transparent;
     border-width: 0;
@@ -50,7 +50,7 @@
     display: flex;
     /* margin: 2px; */
     margin-right: 10px;
-    height: 5vh;
+    height: 6vh;
     align-self: center;
     /* border-radius: 40px; */
 }
