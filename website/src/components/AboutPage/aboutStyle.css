@@ -1,24 +1,27 @@
+
+/* AboutPageContainer ------------- */
+
 .aboutPageContainer {
   /* background-color: blue; */
-  margin-left: 20%;
-  margin-right: 20%;
+  /* margin: 5%; */
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-/* color: transparent;
-    background-image: linear-gradient(#9200ec, #bf6bf3);
-    background-clip: text; */
 .raviRosyidiContainer {
-  height: 80vh;
+  height: 90vh;
   /* background-color: black; */
-  /* display: grid; */
-  /* align-content: center; */
-  /* justify-content: center; */
+  display: grid;
+  align-content: center; 
+  justify-content: center; 
 }
 
 .raviRosyidi {
   /* position: relative; */
-  padding-top: 5%;
-  font-size: 800%;
+  /* padding-top: 20%; */
+  /* background-color: wheat; */
+  /* margin-top: 100%; */
+  font-size: 700%;
   /* margin-bottom: 0%; */
   letter-spacing: 20px;
   text-align: center;
@@ -32,35 +35,28 @@
   /* position: sticky; */
   text-align: center;
   color: white;
-  /* margin-top: -30%; */
+  /* margin-top: 30%; */
   /* background-color: black; */
 }
 
-.body {
-  text-align: center;
-  color: white;
-  width: 50%;
-  justify-self: center;
-}
+/* AboutPageContainer ------------- */
 
 .line {
   /* position: absolute ; */
-  margin-left: -5%;
-  width: 110%;
+  /* margin-left: -5%; */
+  width: 100%;
   background-color: white;
-  transition: all 10s ease;
+  transition: all 2s ease;
+  opacity: 0%;
 }
 
-.bold {
-  color: #a784c4;
-  font-weight: "bold";
-  font-size: larger;
-}
+/* AboutMeContainer ------------- */
 
 .aboutMeContainer {
   margin-top: 30%;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
+  /* height: 100vh; */
   /* background-color: black; */
 }
 
@@ -68,11 +64,42 @@
   color: white;
 }
 
+.aboutMeParagraphContainer {
+  /* display: grid; */
+  width: 100%;
+  /* background-color: green; */
+  height: 50%;
+  /* text-align: center; */
+  /* gap: 0; */
+  /* display:flow-root; */
+}
+
 .aboutMeParagraph {
   color: white;
-  width: 400px;
-  background-color: transparent;
+  /* margin-top: 10%; */
+  /* width: 50%; */
+  /* background-color: green; */
 }
+
+.faceContainer {
+  /* background-color: white; */
+  width: 40%;
+  display: flex;
+  /* margin-right: 5%; */
+  align-content: center;
+  justify-content: center;
+}
+
+.face {
+  height: 25%;
+  /* width: 30%; */
+  /* margin-right: 5%; */
+  border-radius: 20%;
+  box-shadow: 4px 4px 0px 2px #9200ec;
+  /* flex: auto; */
+}
+
+/* AboutMeContainer ------------- */
 
 .contactMe {
   background-color: transparent;
@@ -89,15 +116,8 @@
   margin-bottom: 10%;
 }
 
-.face {
-  height: 300px;
-  margin-left: 10%;
-  border-radius: 20%;
-  box-shadow: 4px 4px 0px 2px #9200ec;
-}
-
 .technologiesSection {
-  margin-top: 30%;
+  margin-top: 0%;
   /* background-color: black; */
   /* height: 150vh; */
 }

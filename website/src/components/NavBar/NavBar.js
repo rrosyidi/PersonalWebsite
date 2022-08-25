@@ -9,11 +9,11 @@ const hoverAnimation = (ref) => {
 };
 
 const leaveHoverAnimation = (ref) => {
-  ref.current.style.fontSize = "120%";
+  ref.current.style.fontSize = "110%";
 };
 
 const scrollToSection = (ref) => {
-  ref.current.scrollIntoView({ block: "center", behavior: "smooth" });
+  ref.current.scrollIntoView({behavior: "smooth" });
 };
 
 const NavBar = React.forwardRef((props, ref) => {

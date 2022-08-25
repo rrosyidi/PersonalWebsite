@@ -1,6 +1,6 @@
 .projectsPageContainer {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 25%;
   /* background-color: green; */
 }
@@ -27,6 +27,7 @@
   /* margin: 10%; */
   /* background: linear-gradient(-45deg, white, #9200ec); */
   border-radius: 30px;
+  margin: 5%;
 }
 
 .headerContainer {
