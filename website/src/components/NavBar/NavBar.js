@@ -25,9 +25,10 @@ const NavBar = React.forwardRef((props, ref) => {
   const eduRef = useRef();
 
   return (
+
     <div className="navBar">
 
-      <div style={{ marginTop: "3%", display: "flex" }}>
+      <div className="navLinksAndImage">
 
         {/* Linkedin Link + Name */}
         <img
@@ -39,9 +40,10 @@ const NavBar = React.forwardRef((props, ref) => {
           }
           onMouseOver={() => (lnk.current.style.cursor = "pointer")}
         />
-        <div>
-          <h3 style={{ color: "white" }}>Ravi Rosyidi</h3>
-        </div>
+
+        {/* <div> */}
+          <h3 className="navBarName">Ravi Rosyidi</h3>
+        {/* </div> */}
 
         {/* Navigational Links */}
         <div className="navLinks">
