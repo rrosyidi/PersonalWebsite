@@ -1,15 +1,10 @@
+/* projectPageContainer + Title ------------- */
 .projectsPageContainer {
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 25%;
   /* background-color: green; */
   height: 90vh;
-}
-
-.projectContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .projectsTitle {
@@ -22,13 +17,26 @@
   justify-content: center;
 }
 
-.projectsHeader {
-  color: white;
-  font-size: 1.3vw;
-  /* margin: 10%; */
+.projectContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* projectPageContainer + Title ------------- */
+
+/* Invidiual Project Containers ------------- */
+.indivProject {
+  width: 30%;
+  height: 80vh;
+  background-color: #232d3a;
   /* background: linear-gradient(-45deg, white, #9200ec); */
+  text-align: center;
+  margin: 2%;
+  /* overflow-y: scroll; */
+  /* -ms-overflow-style: none;
+  scrollbar-width: none; */
   border-radius: 30px;
-  margin: 5%;
+  /* box-shadow: 2px 2px 0px 1px #9200ec; */
 }
 
 .headerContainer {
@@ -45,19 +53,35 @@
   border-top-right-radius: 30px;
 }
 
-.indivProject {
-  width: 30%;
-  height: 80vh;
-  background-color: #232d3a;
+.projectsHeader {
+  color: white;
+  font-size: 1.3vw;
+  /* margin: 10%; */
   /* background: linear-gradient(-45deg, white, #9200ec); */
-  text-align: center;
-  margin: 2%;
-  /* overflow-y: scroll; */
-  /* -ms-overflow-style: none;
-  scrollbar-width: none; */
   border-radius: 30px;
-  /* box-shadow: 2px 2px 0px 1px #9200ec; */
+  margin: 5%;
 }
+
+/* Scroll For Individual Project ------------- */
+.bodyScroll {
+  overflow-y: scroll;
+  height: 80%;
+}
+
+.bodyScroll::-webkit-scrollbar {
+  width: 1vh;
+  height: 1vh;
+}
+
+.bodyScroll::-webkit-scrollbar-track {
+  background: #232d3a;
+}
+
+.bodyScroll::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 20px;
+}
+/* Scroll For Individual Project ------------- */
 
 .projBody {
   width: 80%;
@@ -118,25 +142,6 @@
 .imagesBesideFirst {
     margin-left: 5%;
     margin-bottom: 5%;
-}
-
-.bodyScroll {
-    overflow-y: scroll;
-    height: 80%;
-}
-
-.bodyScroll::-webkit-scrollbar {
-    width: 1vh;
-    height: 1vh;
-}
-
-.bodyScroll::-webkit-scrollbar-track {
-    background: #232d3a;
-}
-
-.bodyScroll::-webkit-scrollbar-thumb {
-    background: white;
-    border-radius: 20px;
 }
 
 .imageScroll {

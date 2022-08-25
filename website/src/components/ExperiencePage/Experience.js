@@ -37,16 +37,20 @@ const Experience = React.forwardRef((props, ref) => {
   const PopulateExperience = (props) => {
     return (
       <div className="listExperience">
+
         <div className="individualSec">
           <p className="dates">{props.date}</p>
           <hr className="nextLine indivLine" />
+
           <div className="expHeaderBody">
             <p className="expHeader">{props.title}{props.company}</p>
             {props.meta.map((point, index) => (
               <li className="expBody" key={index}>{point}</li>
             ))}
           </div>
+          
         </div>
+
       </div>
     );
   };

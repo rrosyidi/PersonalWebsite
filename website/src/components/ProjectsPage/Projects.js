@@ -110,6 +110,7 @@ const Projects = React.forwardRef((props, ref) => {
   return (
     <div ref={ref} className="projectsPageContainer">
       <h1 className="projectsTitle">Personal Projects</h1>
+      
       <div className="projectContainer">
 
         {/* Create spotlight for individual projects */}
