@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import linkedin from "./NavBarImages/linkedin.png";
 import "./style.css";
 
@@ -27,7 +27,7 @@ const NavBar = React.forwardRef((props, ref) => {
 
   const twoHeight = window.innerHeight*1.3;
   
-  const loadAnimation = () => {
+  useEffect (() => {
     setTimeout(() => {
       lnk.current.style.marginTop = "0%"
     }, 300)
@@ -46,11 +46,11 @@ const NavBar = React.forwardRef((props, ref) => {
     setTimeout(() => {
       eduRef.current.style.marginTop = "3.5%"
     }, 800)
-  }
+  }, []);
 
-  window.addEventListener('load', () => {
-    loadAnimation()
-  })
+  // window.addEventListener('load', () => {
+  //   loadAnimation()
+  // })
 
   return (
 
