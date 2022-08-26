@@ -19,14 +19,41 @@ const scrollToSection = (ref) => {
 const NavBar = React.forwardRef((props, ref) => {
   const { expierence, projects, education } = ref.current;
   const lnk = useRef();
+  const name = useRef();
   const aboutRef = useRef();
   const expRef = useRef();
   const projRef = useRef();
   const eduRef = useRef();
 
   const twoHeight = window.innerHeight*1.3;
+  
+  const loadAnimation = () => {
+    setTimeout(() => {
+      lnk.current.style.marginTop = "0%"
+    }, 300)
+    setTimeout(() => {
+      name.current.style.marginTop = "1.4%"
+    }, 400)
+    setTimeout(() => {
+      aboutRef.current.style.marginTop = "3.5%"
+    }, 500)
+    setTimeout(() => {
+      expRef.current.style.marginTop = "3.5%"
+    }, 600)
+    setTimeout(() => {
+      projRef.current.style.marginTop = "3.5%"
+    }, 700)
+    setTimeout(() => {
+      eduRef.current.style.marginTop = "3.5%"
+    }, 800)
+  }
+
+  window.addEventListener('load', () => {
+    loadAnimation()
+  })
 
   return (
+
 
     <div className="navBar">
 
@@ -44,7 +71,7 @@ const NavBar = React.forwardRef((props, ref) => {
         />
 
         {/* <div> */}
-          <h3 className="navBarName">Ravi Rosyidi</h3>
+          <h3 ref={name} className="navBarName">Ravi Rosyidi</h3>
         {/* </div> */}
 
         {/* Navigational Links */}

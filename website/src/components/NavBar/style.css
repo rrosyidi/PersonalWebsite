@@ -9,6 +9,8 @@
 }
 
 .navBarName {
+    transition: all .3s ease-in;
+    margin-top: -7%;
     color: white;
     width: 100%;
     /* font-size: 110%; */
@@ -20,7 +22,8 @@
     margin-top: 1%;
     display: inherit;
     /* background-color:green; */
-    width: 100%
+    width: 100%;
+    height: 6vh;
 }
 
 .navLinks {
@@ -31,12 +34,14 @@
     /* margin-left: 10%; */
     /* margin-right: 10%; */
     flex-direction: row;
+    /* align-items: center; */
     /* justify-content: flex-end; */
     /* width: 80%; */
     /* height: 60px; */
 }
 
 .linkStyle {
+    transition: all .3s ease-in;
     margin: 1vw;
     color: white;
     font-size: 1vw;
@@ -44,13 +49,18 @@
     background-color: transparent;
     border-width: 0;
     font-weight: 700;
+    /* align-self: center; */
+    margin-top: -18%;
+    /* margin-top: 3.5%; */
 }
 
 .faceImage {
+    transition: all .3s ease-in;
     display: flex;
     /* margin: 2px; */
     margin-right: 10px;
     height: 5vh;
     align-self: center;
     /* border-radius: 40px; */
+    margin-top: -10%;
 }
