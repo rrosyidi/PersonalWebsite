@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar/NavBar";
 import About from "./components/AboutPage/About";
-import Education from "./components/Education";
+import Links from "./components/LinksPage/Links";
 import Experience from "./components/ExperiencePage/Experience";
 import Projects from "./components/ProjectsPage/Projects";
 import { useRef } from "react";
@@ -18,13 +18,13 @@ function App() {
         <About/>
         <Experience ref={expierence}/>
         <Projects ref={projects}/>
-        <Education ref={education}/>
-        <button
+        <Links ref={education}/>
+        {/* <button
             className="contactMe"
             onClick={() => (window.location = "mailto:ravi0rwork@gmail.com")}
           >
             Contact Me 
-          </button>
+          </button> */}
     </div>
   );
 }
