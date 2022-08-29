@@ -54,7 +54,7 @@
 /* AboutMeContainer ------------- */
 
 .aboutMeContainer {
-  margin-top: 30%;
+  margin-top: 35%;
   margin-left: 15%;
   margin-right: 15%;
   /* height: 100vh; */
@@ -62,15 +62,24 @@
 }
 
 .aboutMeTag {
+  opacity: 0%;
+  transition: all .5s ease-in;
+  /* margin-top: 5%; */
   color: white;
   font-size: 1.8vw;
+  /* background-color: green; */
+  position: absolute;
+  margin-top: 0%;
 }
 
 .aboutMeParagraphContainer {
   /* display: grid; */
+  margin-top: 3%;
   width: 50%;
   /* background-color: green; */
   height: 50%;
+  opacity: 0%;
+  transition: all .5s ease-in;
   /* text-align: center; */
   /* gap: 0; */
   /* display:flow-root; */
@@ -92,6 +101,10 @@
   margin-left: 5%;
   align-content: center;
   justify-content: center;
+  opacity: 0%;
+  margin-top: 3%;
+  transition: all .5s ease-in;
+
 }
 
 .face {
@@ -137,6 +150,11 @@
   justify-content: center;
   /* background-color: black; */
   font-size: 1.7vw;
+  /* position: absolute; */
+  margin-top: 0%;
+  transition: all .5s ease-in;
+  opacity: 0%;
+  /* margin-top: -3%; */
 }
 
 .cardFlipColumnContainer {
@@ -151,6 +169,9 @@
 
 .cardFlipRowContainer {
   display: flex;
+  margin-top: 3%;
+  transition: all .5s ease-in;
+  opacity: 0%;
   /* background-color: white; */
   /* margin-top: 10%; */
 }

@@ -25,7 +25,7 @@ const NavBar = React.forwardRef((props, ref) => {
   const projRef = useRef();
   const eduRef = useRef();
 
-  const twoHeight = window.innerHeight*1.3;
+  const twoHeight = window.innerHeight*1.25;
   
   useEffect (() => {
     setTimeout(() => {
