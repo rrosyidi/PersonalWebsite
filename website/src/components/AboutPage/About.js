@@ -71,7 +71,7 @@ class About extends Component {
   handleScroll = (event) => {
     // console.log(window.innerHeight)
     console.log(window.scrollY);
-    if (window.innerHeight * (4 / 10) < window.scrollY) {
+    if (window.innerHeight * (9 / 20) < window.scrollY) {
       // console.log("Hitting About Me Page")
       // console.log("Display AboutmeTag")
       display(this.aboutMeTag, "-3%")
@@ -79,7 +79,7 @@ class About extends Component {
         display(this.aboutMeMeta, "0%")
         display(this.aboutMeImg, "0%")
       }, 200)
-    } else if (window.innerHeight * (4 / 10) > window.scrollY) {
+    } else if (window.innerHeight * (9 / 20) > window.scrollY) {
       // console.log("Hide About Me Tag")
       hide(this.aboutMeTag, "0%")
       hide(this.aboutMeMeta, "3%")
