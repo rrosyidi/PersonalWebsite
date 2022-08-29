@@ -70,7 +70,7 @@ class About extends Component {
 
   handleScroll = (event) => {
     // console.log(window.innerHeight)
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     if (window.innerHeight * (7/10) < window.scrollY) {
       // console.log("Hitting About Me Page")
       // console.log("Display AboutmeTag")
