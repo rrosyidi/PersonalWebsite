@@ -54,7 +54,7 @@ const Experience = React.forwardRef((props, ref) => {
   const handleExpScroll = (event) => {
     // console.log("In exp scroll ", window.scrollY)
     // console.log(exp2)
-    if (window.innerHeight * 2.9 < window.scrollY) {
+    if (window.innerHeight * 3.3 < window.scrollY) {
       display(expTitle, "-3%");
       setTimeout(() => {
         display(exp1, "3%");
@@ -66,7 +66,7 @@ const Experience = React.forwardRef((props, ref) => {
         }, 200);
       }, 200);
       // exp1.current.style.padding = "3%"
-    } else if (window.innerHeight * 2.9 > window.scrollY) {
+    } else if (window.innerHeight * 3.3 > window.scrollY) {
       hide(expTitle, "0%");
       hide(exp1, "6%");
       hide(exp2, "6%");

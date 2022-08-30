@@ -79,7 +79,7 @@ class About extends Component {
   handleScroll = (event) => {
     // console.log(window.innerHeight)
     // console.log(window.scrollY);
-    if (window.innerHeight * (7 / 10) < window.scrollY) {
+    if (window.innerHeight * (9 / 10) < window.scrollY) {
       // console.log("Hitting About Me Page")
       // console.log("Display AboutmeTag")
       display(this.aboutMeTag, "-3%");
@@ -87,14 +87,14 @@ class About extends Component {
         display(this.aboutMeMeta, "0%");
         display(this.aboutMeImg, "0%");
       }, 200);
-    } else if (window.innerHeight * (7 / 10) > window.scrollY) {
+    } else if (window.innerHeight * (9 / 10) > window.scrollY) {
       // console.log("Hide About Me Tag")
       hide(this.aboutMeTag, "0%");
       hide(this.aboutMeMeta, "3%");
       hide(this.aboutMeImg, "3%");
     }
 
-    if (window.innerHeight * 1.7 < window.scrollY) {
+    if (window.innerHeight * 1.9 < window.scrollY) {
       display(this.techHeader, "-3%");
       setTimeout(() => {
         display(this.skillsRowOne, "0%");
@@ -102,7 +102,7 @@ class About extends Component {
           display(this.skillsRowTwo, "0%");
         }, 200);
       }, 200);
-    } else if (window.innerHeight * 1.7 > window.scrollY) {
+    } else if (window.innerHeight * 1.9 > window.scrollY) {
       hide(this.techHeader, "0%");
       hide(this.skillsRowOne, "3%");
       hide(this.skillsRowTwo, "3%");
