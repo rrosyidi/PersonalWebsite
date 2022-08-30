@@ -47,8 +47,8 @@ class About extends Component {
     hide(this.skillsRowTwo, "3%");
     window.addEventListener("scroll", this.handleScroll);
     // console.log("Height of VH is ", window.innerHeight);
-    console.log("Height of VW is ", window.innerWidth);
-    console.log("2/5 is  ", 2 / 5);
+    // console.log("Height of VW is ", window.innerWidth);
+    // console.log("2/5 is  ", 2 / 5);
     setTimeout(() => {
       this.introName.current.style.marginTop = "100%";
       this.introName.current.style.opacity = "0%";
