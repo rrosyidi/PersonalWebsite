@@ -11,14 +11,14 @@ import python from "./AboutPageImages/python.png";
 import CardFlip from "./CardFlip.js";
 
 const display = (ref, margin) => {
-  ref.current.style.marginTop = margin
+  ref.current.style.marginTop = margin;
   ref.current.style.opacity = "100%";
-}
+};
 
 const hide = (ref, margin) => {
-  ref.current.style.marginTop = margin
+  ref.current.style.marginTop = margin;
   ref.current.style.opacity = "0%";
-}
+};
 
 class About extends Component {
   constructor(props) {
@@ -37,9 +37,15 @@ class About extends Component {
   }
 
   componentDidMount() {
+    hide(this.aboutMeTag, "0%");
+    hide(this.aboutMeMeta, "3%");
+    hide(this.aboutMeImg, "3%");
+    hide(this.techHeader, "0%");
+    hide(this.skillsRowOne, "3%");
+    hide(this.skillsRowTwo, "3%");
     window.addEventListener("scroll", this.handleScroll);
-    console.log("Height of VH is ", window.innerHeight);
-    console.log("Height of VW is ", window.innerWidth);
+    // console.log("Height of VH is ", window.innerHeight);
+    // console.log("Height of VW is ", window.innerWidth);
     // console.log("2/5 is  ", 2 / 5);
     setTimeout(() => {
       this.introName.current.style.marginTop = "100%";
@@ -71,36 +77,35 @@ class About extends Component {
   handleScroll = (event) => {
     // console.log(window.innerHeight)
     // console.log(window.scrollY);
-    if (window.innerHeight * (7/10) < window.scrollY) {
+    if (window.innerHeight * (7 / 10) < window.scrollY) {
       // console.log("Hitting About Me Page")
       // console.log("Display AboutmeTag")
-      display(this.aboutMeTag, "-3%")
+      display(this.aboutMeTag, "-3%");
       setTimeout(() => {
-        display(this.aboutMeMeta, "0%")
-        display(this.aboutMeImg, "0%")
-      }, 200)
-    } else if (window.innerHeight * (7/10) > window.scrollY) {
+        display(this.aboutMeMeta, "0%");
+        display(this.aboutMeImg, "0%");
+      }, 200);
+    } else if (window.innerHeight * (7 / 10) > window.scrollY) {
       // console.log("Hide About Me Tag")
-      hide(this.aboutMeTag, "0%")
-      hide(this.aboutMeMeta, "3%")
-      hide(this.aboutMeImg, "3%")
+      hide(this.aboutMeTag, "0%");
+      hide(this.aboutMeMeta, "3%");
+      hide(this.aboutMeImg, "3%");
     }
 
-    if (window.innerHeight*1.7 < window.scrollY) {
-      display(this.techHeader, "-3%")
+    if (window.innerHeight * 1.7 < window.scrollY) {
+      display(this.techHeader, "-3%");
       setTimeout(() => {
-        display(this.skillsRowOne, "0%")
+        display(this.skillsRowOne, "0%");
         setTimeout(() => {
-          display(this.skillsRowTwo, "0%")
+          display(this.skillsRowTwo, "0%");
         }, 200);
       }, 200);
-    } else if (window.innerHeight*1.7 > window.scrollY) {
-      hide(this.techHeader, "0%")
-      hide(this.skillsRowOne, "3%")
-      hide(this.skillsRowTwo, "3%")
+    } else if (window.innerHeight * 1.7 > window.scrollY) {
+      hide(this.techHeader, "0%");
+      hide(this.skillsRowOne, "3%");
+      hide(this.skillsRowTwo, "3%");
     }
-
-  }
+  };
 
   render() {
     return (
@@ -162,7 +167,9 @@ class About extends Component {
 
         {/* Techonlgies I've had expierenced with */}
         <div className="technologiesSection">
-          <h1 ref={this.techHeader} className="techHeader">Notable Techonlogies and Skills</h1>
+          <h1 ref={this.techHeader} className="techHeader">
+            Notable Techonlogies and Skills
+          </h1>
 
           {/* Cards */}
           <div ref={this.skillsRowOne} className="cardFlipRowContainer">

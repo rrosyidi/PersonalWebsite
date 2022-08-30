@@ -12,8 +12,8 @@ const leaveHoverAnimation = (ref) => {
   ref.current.style.fontSize = "1vw";
 };
 
-const scrollToSection = (ref) => {
-  ref.current.scrollIntoView({block:"center", behavior: "smooth"});
+const scrollToSection = (ref, position) => {
+  ref.current.scrollIntoView({block: position, behavior: "smooth"});
 };
 
 const NavBar = React.forwardRef((props, ref) => {
@@ -26,6 +26,7 @@ const NavBar = React.forwardRef((props, ref) => {
   const eduRef = useRef();
 
   const twoHeight = window.innerHeight*1.25;
+  const projHeight = window.innerHeight*5.125
   
   useEffect (() => {
     setTimeout(() => {
@@ -90,7 +91,7 @@ const NavBar = React.forwardRef((props, ref) => {
             className="linkStyle"
             onMouseOver={() => hoverAnimation(expRef)}
             onMouseLeave={() => leaveHoverAnimation(expRef)}
-            onClick={() => scrollToSection(expierence)}
+            onClick={() => scrollToSection(expierence, "end")}
           >
             Experience
           </button>
@@ -99,7 +100,8 @@ const NavBar = React.forwardRef((props, ref) => {
             className="linkStyle"
             onMouseOver={() => hoverAnimation(projRef)}
             onMouseLeave={() => leaveHoverAnimation(projRef)}
-            onClick={() => scrollToSection(projects)}
+            onClick={() => scrollToSection(projects, "center")}
+            // onClick={() => window.scrollTo({top: projHeight, behavior: "smooth"})}
           >
             Projects
           </button>
@@ -108,7 +110,7 @@ const NavBar = React.forwardRef((props, ref) => {
             className="linkStyle"
             onMouseOver={() => hoverAnimation(eduRef)}
             onMouseLeave={() => leaveHoverAnimation(eduRef)}
-            onClick={() => scrollToSection(education)}
+            onClick={() => scrollToSection(education, "start")}
           >
             Links
           </button>

@@ -9,28 +9,6 @@ const Links = React.forwardRef((props, ref) => {
   const github = useRef();
   const resume = useRef();
 
-  //   const [isHovering, setHovering] = useState([false, false, false]);
-
-  //   const handleHovering = (index, bool) => {
-  //     let newData = [...isHovering]
-  //     newData[index] = bool
-  //     console.log("Arr contains ", newData)
-  //     setHovering(newData)
-  //     console.log("isHovering contains ", isHovering)
-  //   }
-
-  // const [gmailHov, setgmailHov] = useState(false)
-
-  // const handleMailHovOver = () => {
-  //     setgmailHov(true)
-  //     console.log("onHover" , gmailHov)
-  // }
-
-  // const handleMailHovLeave = () => {
-  //     setgmailHov(false)
-  //     console.log("onLeave" , gmailHov)
-  // }
-
   const handleEnter = (ref) => {
     ref.current.style.opacity = "100%";
   };
@@ -41,7 +19,7 @@ const Links = React.forwardRef((props, ref) => {
 
   return (
     <div ref={ref} className="linkContainer">
-      <h1 className="linkTitle">Links</h1>
+      <h1 className="linkTitle">Links and Socials</h1>
 
       <div className="linkAndBody">
         <div

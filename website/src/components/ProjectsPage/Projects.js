@@ -1,4 +1,4 @@
-import React, { Component, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import "./projectStyle.css";
 import HomePage from "./projectImages/HomePage.jpg";
 import HomePageClicked from "./projectImages/HomePageClicked.jpg";
@@ -18,22 +18,24 @@ import HeatMap from "./projectImages/HeatMap.png";
 import EmissionList from "./projectImages/EmissionList.png";
 import CompareFootprint from "./projectImages/CompareFootprint.png";
 
-const CreateProjectSpotlight = (props) => {
+const CreateProjectSpotlight = React.forwardRef((props, ref) => {
   const link = props.data.buttonLink;
   const width = props.scrollImagesWidth;
   const height = props.scrollImagesHeight;
   const mainWidth = props.mainImgWidth;
-  const ref = useRef();
+  const buttonRef = useRef();
 
   return (
-    <div className="indivProject">
+    <div ref={ref} className="indivProject">
       <div className="headerContainer">
         <h1 className="projectsHeader">{props.data.projTitle}</h1>
       </div>
 
       <div className="bodyScroll">
         <div className="projBody">
-          <p style={{ wordWrap: "break-word", fontSize: "1vw"}}>{props.data.mainInfo}</p>
+          <p style={{ wordWrap: "break-word", fontSize: "1vw" }}>
+            {props.data.mainInfo}
+          </p>
           <img
             className="projImage introImage"
             src={props.mainImg}
@@ -41,10 +43,12 @@ const CreateProjectSpotlight = (props) => {
           />
           <hr className="projLine" />
           {props.data.extraInfo.map((info, index) => (
-            <p style={{ wordWrap: "break-word", fontSize: "1vw"}} key={index}>{info}</p>
+            <p style={{ wordWrap: "break-word", fontSize: "1vw" }} key={index}>
+              {info}
+            </p>
           ))}
           <hr className="projLine" />
-          <h2 style={{fontSize: "1.25vw"}}>ScreenShots</h2>
+          <h2 style={{ fontSize: "1.25vw" }}>ScreenShots</h2>
           <div className="imageScroll">
             {props.scrollImages.map((img, index) => (
               <img
@@ -56,10 +60,10 @@ const CreateProjectSpotlight = (props) => {
             ))}
           </div>
           <button
-            ref={ref}
+            ref={buttonRef}
             className="projButton"
             onClick={() => window.open(link)}
-            onMouseOver={() => (ref.current.style.cursor = "pointer")}
+            onMouseOver={() => (buttonRef.current.style.cursor = "pointer")}
           >
             {props.data.buttonText}
           </button>
@@ -67,9 +71,14 @@ const CreateProjectSpotlight = (props) => {
       </div>
     </div>
   );
-};
+});
 
 const Projects = React.forwardRef((props, ref) => {
+  const projTitleRef = useRef();
+  const SS = useRef();
+  const HIA = useRef();
+  const CFV = useRef();
+
   const projData = [
     {
       projTitle: "Spot Search",
@@ -107,14 +116,61 @@ const Projects = React.forwardRef((props, ref) => {
     },
   ];
 
+  useEffect(() => {
+    hide(projTitleRef, "3%");
+    hide(SS, "3%");
+    hide(HIA, "3%");
+    hide(CFV, "3%");
+    window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const display = (ref, margin) => {
+    ref.current.style.marginTop = margin;
+    ref.current.style.opacity = "100%";
+  };
+
+  const hide = (ref, margin) => {
+    ref.current.style.marginTop = margin;
+    ref.current.style.opacity = "0%";
+  };
+
+  const handleScroll = (event) => {
+    console.log(window.scrollY);
+    if (window.innerHeight * 4.4 < window.scrollY) {
+      display(projTitleRef, "0%");
+      setTimeout(() => {
+        display(SS, "0%");
+        setTimeout(() => {
+          display(HIA, "0%");
+          setTimeout(() => {
+            display(CFV, "0%");
+          }, 200);
+        }, 200);
+      }, 200);
+    } else if (window.innerHeight * 4.4 > window.scrollY) {
+      hide(projTitleRef, "3%");
+      hide(SS, "3%");
+      hide(HIA, "3%");
+      hide(CFV, "3%");
+    }
+  };
+
   return (
     <div ref={ref} className="projectsPageContainer">
-      <h1 className="projectsTitle">Personal Projects</h1>
-      
-      <div className="projectContainer">
+      <div class="projTitleContainer">
+        <h1 ref={projTitleRef} className="projectsTitle">
+          Personal Projects
+        </h1>
+      </div>
 
+      <div className="projectContainer">
         {/* Create spotlight for individual projects */}
         <CreateProjectSpotlight
+          ref={SS}
           data={projData[0]}
           mainImg={HomePage}
           scrollImages={[
@@ -130,6 +186,7 @@ const Projects = React.forwardRef((props, ref) => {
         />
 
         <CreateProjectSpotlight
+          ref={HIA}
           data={projData[1]}
           mainImg={HapVsGDP}
           scrollImages={[HapVsLE, HapVsSS, HapVsFreedom, HapVsGDPColor]}
@@ -139,6 +196,7 @@ const Projects = React.forwardRef((props, ref) => {
         />
 
         <CreateProjectSpotlight
+          ref={CFV}
           data={projData[2]}
           mainImg={CF}
           scrollImages={[CompareFootprint, HeatMap, EmissionList]}

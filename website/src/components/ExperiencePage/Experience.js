@@ -40,39 +40,43 @@ const Experience = React.forwardRef((props, ref) => {
   ];
 
   const display = (ref, margin) => {
-    ref.current.style.opacity = "100%"
-    ref.current.style.marginTop = margin
-  }
+    ref.current.style.opacity = "100%";
+    ref.current.style.marginTop = margin;
+  };
 
   const hide = (ref, margin) => {
-    ref.current.style.opacity = "0%"
-    ref.current.style.marginTop = margin
-  }
+    ref.current.style.opacity = "0%";
+    ref.current.style.marginTop = margin;
+  };
 
   const handleExpScroll = (event) => {
     // console.log("In exp scroll ", window.scrollY)
     // console.log(exp2)
     if (window.innerHeight * 2.9 < window.scrollY) {
-      display(expTitle, "-6%")
+      display(expTitle, "-3%");
       setTimeout(() => {
-        display(exp1, "0%")
+        display(exp1, "3%");
         setTimeout(() => {
-          display(exp2, "3%")
+          display(exp2, "3%");
           setTimeout(() => {
-            display(exp3, "3%")
+            display(exp3, "3%");
           }, 200);
         }, 200);
       }, 200);
       // exp1.current.style.padding = "3%"
     } else if (window.innerHeight * 2.9 > window.scrollY) {
-      hide(expTitle, "-4%")
-      hide(exp1, "3%")
-      hide(exp2, "6%")
-      hide(exp3, "6%")
+      hide(expTitle, "0%");
+      hide(exp1, "6%");
+      hide(exp2, "6%");
+      hide(exp3, "6%");
     }
   };
 
   useEffect(() => {
+    hide(expTitle, "0%");
+    hide(exp1, "6%");
+    hide(exp2, "6%");
+    hide(exp3, "6%");
     window.removeEventListener("scroll", handleExpScroll);
     window.addEventListener("scroll", handleExpScroll);
     return () => {

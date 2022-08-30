@@ -5,6 +5,7 @@
     /* height: 100vh; */
     /* background-color: aqua; */
     display: grid;
+    /* position: absolute; */
 }
 
 .header {
