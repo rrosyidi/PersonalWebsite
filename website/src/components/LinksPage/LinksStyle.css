@@ -7,12 +7,13 @@
     /* align-items: center; */
     /* justify-content: center; */
     /* margin-bottom: 20%; */
-    height: 80vh;
+    height: 90vh;
 }
 
 .linkTitle {
     color: white;
     font-size: 2.3vw;
+    margin-top: 3%;
     /* text-align: center; */
 }
 
@@ -22,6 +23,7 @@
     /* justify-content: center; */
     /* background-color: black; */
     margin-bottom: 3%;
+    /* margin-top: 10%; */
     /* align-items: center; */
 }
 
@@ -39,7 +41,7 @@
 }
 
 .indivLinks:hover {
-    box-shadow: 20px 0px 0px 0px #9200ec;
+    box-shadow: 10px 0px 0px 0px #9200ec;
     /* width: 50%; */
     /* justify-content: flex-end; */
     /* align-items: flex-end; */

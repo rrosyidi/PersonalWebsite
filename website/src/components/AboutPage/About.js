@@ -46,7 +46,7 @@ class About extends Component {
     hide(this.skillsRowOne, "3%");
     hide(this.skillsRowTwo, "3%");
     window.addEventListener("scroll", this.handleScroll);
-    // console.log("Height of VH is ", window.innerHeight);
+    console.log("Height of VH is ", window.innerHeight);
     // console.log("Height of VW is ", window.innerWidth);
     // console.log("2/5 is  ", 2 / 5);
     setTimeout(() => {
