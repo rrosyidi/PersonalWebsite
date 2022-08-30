@@ -91,7 +91,7 @@ const NavBar = React.forwardRef((props, ref) => {
             className="linkStyle"
             onMouseOver={() => hoverAnimation(expRef)}
             onMouseLeave={() => leaveHoverAnimation(expRef)}
-            onClick={() => scrollToSection(expierence, "end")}
+            onClick={() => scrollToSection(expierence, "center")}
           >
             Experience
           </button>

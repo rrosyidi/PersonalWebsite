@@ -11,11 +11,13 @@ import python from "./AboutPageImages/python.png";
 import CardFlip from "./CardFlip.js";
 
 const display = (ref, margin) => {
+  ref.current.style.transition = "all .5s ease-in"
   ref.current.style.marginTop = margin;
   ref.current.style.opacity = "100%";
 };
 
 const hide = (ref, margin) => {
+  ref.current.style.transition = "all .2s ease-in"
   ref.current.style.marginTop = margin;
   ref.current.style.opacity = "0%";
 };

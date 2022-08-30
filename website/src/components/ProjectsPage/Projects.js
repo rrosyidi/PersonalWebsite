@@ -129,11 +129,13 @@ const Projects = React.forwardRef((props, ref) => {
   }, []);
 
   const display = (ref, margin) => {
+    ref.current.style.transition = "all .5s ease-in"
     ref.current.style.marginTop = margin;
     ref.current.style.opacity = "100%";
   };
 
   const hide = (ref, margin) => {
+    ref.current.style.transition = "all .2s ease-in"
     ref.current.style.marginTop = margin;
     ref.current.style.opacity = "0%";
   };
@@ -151,7 +153,9 @@ const Projects = React.forwardRef((props, ref) => {
           }, 200);
         }, 200);
       }, 200);
-    } else if (window.innerHeight * 4.4 > window.scrollY) {
+    }
+    
+    if (window.innerHeight * 4.4 > window.scrollY) {
       hide(projTitleRef, "3%");
       hide(SS, "3%");
       hide(HIA, "3%");

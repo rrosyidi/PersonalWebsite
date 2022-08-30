@@ -40,11 +40,13 @@ const Experience = React.forwardRef((props, ref) => {
   ];
 
   const display = (ref, margin) => {
+    ref.current.style.transition = "all .5s ease-in"
     ref.current.style.opacity = "100%";
     ref.current.style.marginTop = margin;
   };
 
   const hide = (ref, margin) => {
+    ref.current.style.transition = "all .2s ease-in"
     ref.current.style.opacity = "0%";
     ref.current.style.marginTop = margin;
   };
