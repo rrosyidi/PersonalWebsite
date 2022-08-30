@@ -31,22 +31,22 @@ const NavBar = React.forwardRef((props, ref) => {
   useEffect (() => {
     setTimeout(() => {
       lnk.current.style.marginTop = "0%"
-    }, 300)
-    setTimeout(() => {
-      name.current.style.marginTop = "1.4%"
-    }, 400)
-    setTimeout(() => {
-      aboutRef.current.style.marginTop = "3.5%"
     }, 500)
     setTimeout(() => {
-      expRef.current.style.marginTop = "3.5%"
+      name.current.style.marginTop = "1.4%"
     }, 600)
     setTimeout(() => {
-      projRef.current.style.marginTop = "3.5%"
+      aboutRef.current.style.marginTop = "3.5%"
     }, 700)
     setTimeout(() => {
-      eduRef.current.style.marginTop = "3.5%"
+      expRef.current.style.marginTop = "3.5%"
     }, 800)
+    setTimeout(() => {
+      projRef.current.style.marginTop = "3.5%"
+    }, 900)
+    setTimeout(() => {
+      eduRef.current.style.marginTop = "3.5%"
+    }, 1000)
   }, []);
 
   // window.addEventListener('load', () => {

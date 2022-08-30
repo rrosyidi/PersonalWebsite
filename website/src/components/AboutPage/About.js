@@ -46,9 +46,9 @@ class About extends Component {
     hide(this.skillsRowOne, "3%");
     hide(this.skillsRowTwo, "3%");
     window.addEventListener("scroll", this.handleScroll);
-    console.log("Height of VH is ", window.innerHeight);
-    // console.log("Height of VW is ", window.innerWidth);
-    // console.log("2/5 is  ", 2 / 5);
+    // console.log("Height of VH is ", window.innerHeight);
+    console.log("Height of VW is ", window.innerWidth);
+    console.log("2/5 is  ", 2 / 5);
     setTimeout(() => {
       this.introName.current.style.marginTop = "100%";
       this.introName.current.style.opacity = "0%";
@@ -57,19 +57,19 @@ class About extends Component {
     setTimeout(() => {
       this.introName.current.style.transition = "all .4s ease-in";
       this.introName.current.style.marginTop = "-5%";
-    }, 750);
+    }, 1150);
     setTimeout(() => {
       this.subHeading.current.style.marginTop = "50%";
       this.subHeading.current.style.transition = "all .4s ease-in";
       this.subHeading.current.style.marginTop = "-7%";
-    }, 900);
+    }, 1300);
     setTimeout(() => {
       this.introName.current.style.opacity = "100%";
       this.line.current.style.opacity = "100%";
-    }, 950);
+    }, 1350);
     setTimeout(() => {
       this.subHeading.current.style.opacity = "100%";
-    }, 1050);
+    }, 1450);
   }
 
   componentWillUnmount() {
