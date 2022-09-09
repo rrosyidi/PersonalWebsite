@@ -26,7 +26,7 @@ const NavBar = React.forwardRef((props, ref) => {
   const eduRef = useRef();
 
   const twoHeight = window.innerHeight*1.25;
-  const projHeight = window.innerHeight*5.125
+  // const projHeight = window.innerHeight*5.125
   
   useEffect (() => {
     setTimeout(() => {
@@ -63,6 +63,7 @@ const NavBar = React.forwardRef((props, ref) => {
         {/* Linkedin Link + Name */}
         <img
           ref={lnk}
+          alt="LinkedinIcon"
           src={linkedin}
           className="faceImage"
           onClick={() =>

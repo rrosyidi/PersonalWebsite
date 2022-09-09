@@ -1,4 +1,4 @@
-import React, { Component, createRef, useState } from "react";
+import React, { Component, createRef } from "react";
 import "./aboutStyle.css";
 import jira from "./AboutPageImages/Jira.png";
 import node from "./AboutPageImages/Node.png";
@@ -7,8 +7,8 @@ import face from "../NavBar/NavBarImages/faceShot.jpg";
 import docker from "./AboutPageImages/docker.png";
 import aws from "./AboutPageImages/awsCloud.png";
 import python from "./AboutPageImages/python.png";
-
 import CardFlip from "./CardFlip.js";
+import TitlePage from "./TitlePage.js";
 
 const display = (ref, margin) => {
   ref.current.style.transition = "all .5s ease-in"
@@ -25,10 +25,6 @@ const hide = (ref, margin) => {
 class About extends Component {
   constructor(props) {
     super(props);
-    this.introName = createRef();
-    this.subHeading = createRef();
-    this.line = createRef();
-
     this.aboutMeTag = createRef();
     this.aboutMeMeta = createRef();
     this.aboutMeImg = createRef();
@@ -49,27 +45,6 @@ class About extends Component {
     // console.log("Height of VH is ", window.innerHeight);
     // console.log("Height of VW is ", window.innerWidth);
     // console.log("2/5 is  ", 2 / 5);
-    setTimeout(() => {
-      this.introName.current.style.marginTop = "100%";
-      this.introName.current.style.opacity = "0%";
-      this.subHeading.current.style.opacity = "0%";
-    }, 0);
-    setTimeout(() => {
-      this.introName.current.style.transition = "all .4s ease-in";
-      this.introName.current.style.marginTop = "-5%";
-    }, 1150);
-    setTimeout(() => {
-      this.subHeading.current.style.marginTop = "50%";
-      this.subHeading.current.style.transition = "all .4s ease-in";
-      this.subHeading.current.style.marginTop = "-7%";
-    }, 1300);
-    setTimeout(() => {
-      this.introName.current.style.opacity = "100%";
-      this.line.current.style.opacity = "100%";
-    }, 1350);
-    setTimeout(() => {
-      this.subHeading.current.style.opacity = "100%";
-    }, 1450);
   }
 
   componentWillUnmount() {
@@ -112,17 +87,8 @@ class About extends Component {
   render() {
     return (
       <div className="aboutPageContainer" ref={this.props.forwardRef}>
-        <div className="raviRosyidiContainer">
-          <h1 ref={this.introName} className="raviRosyidi">
-            RAVI ROSYIDI
-          </h1>
-          <h2 ref={this.subHeading} className="subHeading">
-            Full-Stack Software Engineer | New Grad
-          </h2>
-        </div>
 
-        {/* Line Seperating the Two */}
-        <hr ref={this.line} className="line" />
+        <TitlePage/>
 
         {/* About Me Container */}
         <div className="aboutMeContainer">
@@ -150,9 +116,9 @@ class About extends Component {
               </p>
               <p className="aboutMeParagraph">
                 I am currently working as a Junior Software Development Engineer
-                @ Publicis Sapient. Mainly using technologies such as Jira and
+                @ Publicis Sapient. Mainly using technologies such as Jira, Docker, and
                 React to digitally transition companies, such as McDonalds, into
-                the twenty-first centrury.
+                the twenty-first century.
               </p>
               <p className="aboutMeParagraph">
                 I'm interested in working on ambitious projects with positive
@@ -162,7 +128,7 @@ class About extends Component {
             </div>
 
             <div className="faceContainer" ref={this.aboutMeImg}>
-              <img src={face} className="face" />
+              <img src={face} className="face" alt="Face"/>
             </div>
           </div>
         </div>
@@ -185,7 +151,7 @@ class About extends Component {
             {/* <CardFlip front="React/ReactJs" back="2020-Present"/> */}
           </div>
           <div ref={this.skillsRowTwo} className="cardFlipRowContainer">
-            <CardFlip front="Docker" back="2020-2022" img={docker} />
+            <CardFlip front="Docker" back="2021-Present" img={docker} />
             <CardFlip front="Python" back="2020-Present" img={python} />
             <CardFlip front="AWS Cloud*" back="In Progress" img={aws} />
             {/* <CardFlip front="React/ReactJs" back="2020-Present"/> */}

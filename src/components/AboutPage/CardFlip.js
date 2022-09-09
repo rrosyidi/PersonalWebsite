@@ -25,7 +25,7 @@ const CardFlip = (props) => {
         >
           <div className="card" onMouseEnter={flipBack}>
             <div className="card imgAndText">
-              <img src={props.img} className="img"/>
+              <img src={props.img} className="img" alt="imageIcon"/>
               <p className="frontBackText">{props.front}</p>
             </div>
           </div>

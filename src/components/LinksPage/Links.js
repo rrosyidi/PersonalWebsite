@@ -57,7 +57,7 @@ const Links = React.forwardRef((props, ref) => {
     return () => {
       window.removeEventListener("scroll", handleLinkScroll);
     };
-  }, []);
+  });
 
   const handleEnter = (ref) => {
     ref.current.style.opacity = "100%";

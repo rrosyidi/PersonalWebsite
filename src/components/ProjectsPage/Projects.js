@@ -40,6 +40,7 @@ const CreateProjectSpotlight = React.forwardRef((props, ref) => {
             className="projImage introImage"
             src={props.mainImg}
             style={{ width: mainWidth }}
+            alt="mainProjectImage"
           />
           <hr className="projLine" />
           {props.data.extraInfo.map((info, index) => (
@@ -56,6 +57,7 @@ const CreateProjectSpotlight = React.forwardRef((props, ref) => {
                 className="projImage imagesBesideFirst"
                 src={img}
                 style={{ width: width, height: height }}
+                alt="ProjectImages"
               />
             ))}
           </div>
@@ -126,7 +128,7 @@ const Projects = React.forwardRef((props, ref) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
 
   const display = (ref, margin) => {
     ref.current.style.transition = "all .5s ease-in"

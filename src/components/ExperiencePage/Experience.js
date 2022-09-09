@@ -84,7 +84,7 @@ const Experience = React.forwardRef((props, ref) => {
     return () => {
       window.removeEventListener("scroll", handleExpScroll);
     };
-  }, []);
+  });
 
   const PopulateExperience = React.forwardRef((props, ref) => {
     return (
