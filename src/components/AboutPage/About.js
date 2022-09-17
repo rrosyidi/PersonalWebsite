@@ -88,6 +88,7 @@ class About extends Component {
     return (
       <div className="aboutPageContainer" ref={this.props.forwardRef}>
 
+        {/* Title Page Including Animations */}
         <TitlePage/>
 
         {/* About Me Container */}
