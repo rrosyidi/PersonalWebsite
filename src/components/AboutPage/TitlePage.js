@@ -20,30 +20,12 @@ const Name = styled.h1(
   })
 );
 
-// const Container = styled.div`
-//   height: 90vh;
-//   // background-color: white;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-// `;
-
 const Container = styled.div({
   height: "90vh",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
 });
-
-// const SubHeading = styled.h2`
-//   text-align: center;
-//   color: white;
-//   font-size: 1.3vw;
-//   transition: all 0.3s ease-in;
-//   // background-color: black;
-//   margin-top: ${(props) => props.marginTop};
-//   opacity: ${(props) => props.opac};
-// `;
 
 const SubHeading = styled.h2(
   {
@@ -58,14 +40,6 @@ const SubHeading = styled.h2(
   })
 );
 
-// const Line = styled.hr`
-//   position: absolute;
-//   width: 70%;
-//   background-color: white;
-//   transition: all 2s ease-in;
-//   opacity: ${(props) => props.opac};
-//   margin-top: 95vh;
-// `;
 
 const Line = styled.hr(
   {
