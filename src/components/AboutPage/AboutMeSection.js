@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React, { createRef, useEffect } from "react";
+import React, { useRef, useEffect} from "react";
 import face from "../NavBar/NavBarImages/faceShot.jpg";
 import DisplayHide from "../DisplayHide.js";
 
@@ -49,9 +49,10 @@ const Face = styled.img({
 });
 
 const AboutMeSection = () => {
-  const aboutMeTag = createRef();
-  const aboutMeMeta = createRef();
-  const aboutMeImg = createRef();
+  const aboutMeContainer = useRef();
+  const aboutMeTag = useRef();
+  const aboutMeMeta = useRef();
+  const aboutMeImg = useRef();
 
   useEffect(() => {
     DisplayHide.hideFunc(aboutMeTag, "0%");
@@ -61,13 +62,17 @@ const AboutMeSection = () => {
     window.removeEventListener("scroll", handleScroll);
     window.addEventListener("scroll", handleScroll);
 
+    // console.log("Offset at start: ", aboutMeTag.current.offsetTop +  aboutMeContainer.current.clientHeight)
+    // console.log("Bottom Window: ", window.scrollY+window.innerHeight)
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   });
 
-  const handleScroll = (event) => {
-    if (aboutMeTag.current.offsetTop/1.5 < window.scrollY ) {
+  const handleScroll = () => {
+    // aboutMeTag.current.offsetTop/1.5 < window.scrollY
+    if (aboutMeTag.current.offsetTop < window.scrollY+window.innerHeight/2) {
         DisplayHide.displayFunc(aboutMeTag, "-3%")
         setTimeout(()=> {
             DisplayHide.displayFunc(aboutMeMeta, "0%")
@@ -78,12 +83,12 @@ const AboutMeSection = () => {
         DisplayHide.hideFunc(aboutMeMeta, "0%")
         DisplayHide.hideFunc(aboutMeImg, "0%")
     }
-    console.log("Offset is ", aboutMeTag.current.offsetTop)
-    console.log("Screen Y is ", window.scrollY);
+    // console.log("Offset is ", aboutMeTag.current.offsetTop)
+    // console.log("Screen Bottom Y is ", window.scrollY+window.innerHeight);
   };
 
   return (
-    <AboutMeContainer>
+    <AboutMeContainer ref={aboutMeContainer}>
       <AboutMeTag ref={aboutMeTag}>About Me</AboutMeTag>
       <div style={{ display: "flex" }}>
         <AboutMeParagraphContainer ref={aboutMeMeta}>
