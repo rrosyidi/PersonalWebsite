@@ -9,6 +9,7 @@ import aws from "./AboutPageImages/awsCloud.png";
 import python from "./AboutPageImages/python.png";
 import CardFlip from "./CardFlip.js";
 import TitlePage from "./TitlePage.js";
+import AboutMeSection from "./AboutMeSection";
 
 const display = (ref, margin) => {
   ref.current.style.transition = "all .5s ease-in"
@@ -35,9 +36,9 @@ class About extends Component {
   }
 
   componentDidMount() {
-    hide(this.aboutMeTag, "0%");
-    hide(this.aboutMeMeta, "3%");
-    hide(this.aboutMeImg, "3%");
+    // hide(this.aboutMeTag, "0%");
+    // hide(this.aboutMeMeta, "3%");
+    // hide(this.aboutMeImg, "3%");
     hide(this.techHeader, "0%");
     hide(this.skillsRowOne, "3%");
     hide(this.skillsRowTwo, "3%");
@@ -57,16 +58,16 @@ class About extends Component {
     if (window.innerHeight * (9 / 10) < window.scrollY) {
       // console.log("Hitting About Me Page")
       // console.log("Display AboutmeTag")
-      display(this.aboutMeTag, "-3%");
+      // display(this.aboutMeTag, "-3%");
       setTimeout(() => {
-        display(this.aboutMeMeta, "0%");
-        display(this.aboutMeImg, "0%");
+        // display(this.aboutMeMeta, "0%");
+        // display(this.aboutMeImg, "0%");
       }, 200);
     } else if (window.innerHeight * (9 / 10) > window.scrollY) {
       // console.log("Hide About Me Tag")
-      hide(this.aboutMeTag, "0%");
-      hide(this.aboutMeMeta, "3%");
-      hide(this.aboutMeImg, "3%");
+      // hide(this.aboutMeTag, "0%");
+      // hide(this.aboutMeMeta, "3%");
+      // hide(this.aboutMeImg, "3%");
     }
 
     if (window.innerHeight * 1.9 < window.scrollY) {
@@ -92,14 +93,14 @@ class About extends Component {
         <TitlePage/>
 
         {/* About Me Container */}
-        <div className="aboutMeContainer">
+        <AboutMeSection/>
+        {/* <div className="aboutMeContainer">
           <h1 ref={this.aboutMeTag} className="aboutMeTag">
             About Me
-          </h1>
-          {/* <hr /> */}
+          </h1> */}
 
           {/* About me paragraphs */}
-          <div style={{ display: "flex" }}>
+          {/* <div style={{ display: "flex" }}>
             <div className="aboutMeParagraphContainer" ref={this.aboutMeMeta}>
               <p className="aboutMeParagraph">
                 I am an aspiring developer with experience in both frontend and
@@ -132,7 +133,7 @@ class About extends Component {
               <img src={face} className="face" alt="Face"/>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Techonlgies I've had expierenced with */}
         <div className="technologiesSection">

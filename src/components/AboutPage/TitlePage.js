@@ -69,7 +69,7 @@ const TitlePage = () => {
       setShowSubHeading(true);
     }, 1400);
     return () => {};
-  }, []);
+  });
 
   return (
     <Container>

@@ -143,7 +143,7 @@ const Projects = React.forwardRef((props, ref) => {
   };
 
   const handleScroll = (event) => {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     if (window.innerHeight * 4.4 < window.scrollY) {
       display(projTitleRef, "0%");
       setTimeout(() => {

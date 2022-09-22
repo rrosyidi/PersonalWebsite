@@ -11,5 +11,4 @@ const hide = (ref, margin) => {
 };
 
 
-
 export default {displayFunc: display, hideFunc: hide};
