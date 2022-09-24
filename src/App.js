@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar/NavBar";
 import About from "./components/AboutPage/About";
-import Links from "./components/LinksPage/Links";
+import LinksComponent from "./components/LinksPage/LinksComponent";
 import ExperienceComponent from "./components/ExperiencePage/ExperienceComponent";
 import ProjectComponent from "./components/ProjectsPage/ProjectComponent";
 import { useRef } from "react";
@@ -8,18 +8,17 @@ import { useRef } from "react";
 function App() {
   const expierence = useRef();
   const projects = useRef();
-  const education = useRef();
+  const links = useRef();
 
-  const allRef = useRef({expierence, projects, education});
+  const allRef = useRef({expierence, projects, links});
 
   return (
     <div style={{ background: "linear-gradient(#604972, #1B2430 )", height: "100vh"}}>
-        <NavBar ref={allRef}/>
         <About/>
-        {/* <ProjectComponent ref={projects}/> */}
         <ExperienceComponent ref={expierence}/>
         <ProjectComponent ref={projects}/>
-        <Links ref={education}/>
+        <LinksComponent ref={links}/>
+        <NavBar ref={allRef}/>
     </div>
   );
 }

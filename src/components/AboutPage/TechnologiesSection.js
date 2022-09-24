@@ -11,9 +11,13 @@ import python from "./AboutPageImages/python.png";
 
 const TechnologiesContainer = styled.div({
   marginTop: "30%",
+  // position: "absolute",
   display: "grid",
+  // display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  // backgroundColor: "black",
+  // height: "50vw"
 });
 
 const TechHeader = styled.h1({

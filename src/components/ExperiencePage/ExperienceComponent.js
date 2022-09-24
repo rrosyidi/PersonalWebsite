@@ -9,7 +9,8 @@ const ExperienceContainer = styled.div({
   marginRight: "15%",
   // height: "71vh",
   display: "flex",
-  flexDirection: "column"
+  flexDirection: "column",
+  // backgroundColor: "black"
 });
 
 const Header = styled.h1({

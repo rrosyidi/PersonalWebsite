@@ -21,7 +21,7 @@ const Name = styled.h1(
 );
 
 const Container = styled.div({
-  height: "90vh",
+  height: "100vh",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",

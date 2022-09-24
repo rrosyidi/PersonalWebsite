@@ -1,15 +1,15 @@
 import React, { useRef, useEffect } from "react";
-import linkedin from "./NavBarImages/linkedin.png";
+// import linkedin from "./NavBarImages/linkedin.png";
 import "./style.css";
 
 const hoverAnimation = (ref) => {
   ref.current.style.transition = "all .4s ease";
-  ref.current.style.fontSize = "1.2vw";
+  ref.current.style.fontSize = "1.5vw";
   ref.current.style.cursor = "pointer";
 };
 
 const leaveHoverAnimation = (ref) => {
-  ref.current.style.fontSize = "1vw";
+  ref.current.style.fontSize = "1.3vw";
 };
 
 const scrollToSection = (ref, position) => {
@@ -17,7 +17,7 @@ const scrollToSection = (ref, position) => {
 };
 
 const NavBar = React.forwardRef((props, ref) => {
-  const { expierence, projects, education } = ref.current;
+  const { expierence, projects, links } = ref.current;
   const lnk = useRef();
   const name = useRef();
   const aboutRef = useRef();
@@ -30,38 +30,42 @@ const NavBar = React.forwardRef((props, ref) => {
   
   useEffect (() => {
     setTimeout(() => {
-      lnk.current.style.marginTop = "0%"
+      lnk.current.style.opacity = "100%"
     }, 500)
     setTimeout(() => {
-      name.current.style.marginTop = "1.4%"
+      name.current.style.opacity = "100%"
     }, 600)
     setTimeout(() => {
-      aboutRef.current.style.marginTop = "3.5%"
+      aboutRef.current.style.opacity = "100%"
     }, 700)
     setTimeout(() => {
-      expRef.current.style.marginTop = "3.5%"
+      expRef.current.style.opacity = "100%"
     }, 800)
     setTimeout(() => {
-      projRef.current.style.marginTop = "3.5%"
+      projRef.current.style.opacity = "100%"
     }, 900)
     setTimeout(() => {
-      eduRef.current.style.marginTop = "3.5%"
+      eduRef.current.style.opacity = "100%"
     }, 1000)
+
+    document.addEventListener('keydown', detectKeyDown, true)
   }, []);
+
+  const detectKeyDown = () => {
+    console.log("Experience Offset Height: ", expierence.current.offsetTop)
+  }
 
   // window.addEventListener('load', () => {
   //   loadAnimation()
   // })
 
   return (
-
-
     <div className="navBar">
 
       <div className="navLinksAndImage">
 
         {/* Linkedin Link + Name */}
-        <img
+        {/* <img
           ref={lnk}
           alt="LinkedinIcon"
           src={linkedin}
@@ -70,7 +74,7 @@ const NavBar = React.forwardRef((props, ref) => {
             window.open("https://www.linkedin.com/in/ravi-rosyidi-081a84198")
           }
           onMouseOver={() => (lnk.current.style.cursor = "pointer")}
-        />
+        /> */}
 
         {/* <div> */}
           <h3 ref={name} className="navBarName">Ravi Rosyidi</h3>
@@ -93,6 +97,8 @@ const NavBar = React.forwardRef((props, ref) => {
             onMouseOver={() => hoverAnimation(expRef)}
             onMouseLeave={() => leaveHoverAnimation(expRef)}
             onClick={() => scrollToSection(expierence, "center")}
+            // onClick={() => window.scrollTo({ top: (expierence.current.offsetTop*.85), behavior: "smooth" })}
+            
           >
             Experience
           </button>
@@ -111,7 +117,7 @@ const NavBar = React.forwardRef((props, ref) => {
             className="linkStyle"
             onMouseOver={() => hoverAnimation(eduRef)}
             onMouseLeave={() => leaveHoverAnimation(eduRef)}
-            onClick={() => scrollToSection(education, "start")}
+            onClick={() => scrollToSection(links, "center")}
           >
             Links
           </button>
