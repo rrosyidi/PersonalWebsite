@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 
 const Name = styled.h1(
   {
-    fontSize: "7vw",
+    // fontSize: "7vw",
+    fontSize: "calc(5vw + 2.5vh)",
     letterSpacing: "20px",
     textAlign: "center",
     fontWeight: 900,
@@ -13,6 +14,7 @@ const Name = styled.h1(
     transition: "all .3s ease-in",
     position: "absolute",
     alignSelf: "center",
+    // backgroundColor: "black"
   },
   (props) => ({
     marginTop: props.marginTop,
@@ -31,8 +33,10 @@ const SubHeading = styled.h2(
   {
     textAlign: "center",
     color: "white",
-    fontSize: "1.3vw",
+    // fontSize: "1.3vw",
+    fontSize: "calc(1vw + .5vh)",
     transition: "all .3s ease-in",
+    // backgroundColor: "black"
   },
   (props) => ({
     marginTop: props.marginTop,
@@ -74,13 +78,13 @@ const TitlePage = () => {
   return (
     <Container>
       <Name
-        marginTop={showName ? "-5%" : "30%"}
+        marginTop={showName ? "-5%" : "40vh"}
         opac={showName ? "100%" : "0%"}
       >
         RAVI ROSYIDI
       </Name>
       <SubHeading
-        marginTop={showSubHeading ? "7%" : "40%"}
+        marginTop={showSubHeading ? "8vh" : "40vh"}
         opac={showSubHeading ? "100%" : "0%"}
       >
         Full-Stack Software Engineer | Recent New Grad
