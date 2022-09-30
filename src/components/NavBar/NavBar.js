@@ -17,7 +17,7 @@ const scrollToSection = (ref, position) => {
 };
 
 const NavBar = React.forwardRef((props, ref) => {
-  const { expierence, projects, links } = ref.current;
+  const {about, expierence, projects, links } = ref.current;
   const lnk = useRef();
   const name = useRef();
   const aboutRef = useRef();
@@ -87,7 +87,7 @@ const NavBar = React.forwardRef((props, ref) => {
             className="linkStyle"
             onMouseOver={() => hoverAnimation(aboutRef)}
             onMouseLeave={() => leaveHoverAnimation(aboutRef)}
-            onClick={() => window.scrollTo({ top: twoHeight, behavior: "smooth" })}
+            onClick={() => scrollToSection(about, "center")}
           >
             About
           </button>

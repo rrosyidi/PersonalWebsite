@@ -13,7 +13,8 @@ const AboutMeTag = styled.h1({
   opacity: "100%",
   transition: "all .5s ease-in",
   color: "white",
-  fontSize: "1.8vw",
+  fontSize: "calc(1.8vw + .8vh)",
+  // fontSize: "1.8vw",
   position: "absolute",
   marginTop: "0%",
 });
@@ -28,7 +29,8 @@ const AboutMeParagraphContainer = styled.div({
 
 const AboutMeParagraph = styled.p({
   color: "white",
-  fontSize: ".95vw",
+  // fontSize: ".95vw",
+  fontSize: "calc(.8vw + .4vh)",
 });
 
 const FaceContainer = styled.div({
@@ -43,12 +45,13 @@ const FaceContainer = styled.div({
 });
 
 const Face = styled.img({
-  height: "15vw",
+  // height: "15vw",
+  height: "calc(12vw + 5vh)",
   borderRadius: "20%",
   boxShadow: "4px 4px 0px 2px #9200ec",
 });
 
-const AboutMeSection = () => {
+const AboutMeSection = React.forwardRef((props, ref) => {
   const aboutMeContainer = useRef();
   const aboutMeTag = useRef();
   const aboutMeMeta = useRef();
@@ -57,7 +60,7 @@ const AboutMeSection = () => {
   useEffect(() => {
     DisplayHide.hideFunc(aboutMeTag, "0%");
     DisplayHide.hideFunc(aboutMeMeta, "3%");
-    DisplayHide.hideFunc(aboutMeImg, "3%");
+    DisplayHide.hideFunc(aboutMeImg, "6%");
 
     window.removeEventListener("scroll", handleScroll);
     window.addEventListener("scroll", handleScroll);
@@ -73,22 +76,23 @@ const AboutMeSection = () => {
   const handleScroll = () => {
     // aboutMeTag.current.offsetTop/1.5 < window.scrollY
     if (aboutMeTag.current.offsetTop < window.scrollY+window.innerHeight/2) {
-        DisplayHide.displayFunc(aboutMeTag, "-3%")
+        // DisplayHide.displayFunc(aboutMeTag, "calc(-3%)")
+        DisplayHide.displayFunc(aboutMeTag, "calc(-1.8vh - 2vw)")
         setTimeout(()=> {
             DisplayHide.displayFunc(aboutMeMeta, "0%")
-            DisplayHide.displayFunc(aboutMeImg, "0%")
+            DisplayHide.displayFunc(aboutMeImg, "3%")
         }, 200)
     } else {
         DisplayHide.hideFunc(aboutMeTag, "0%")
-        DisplayHide.hideFunc(aboutMeMeta, "0%")
-        DisplayHide.hideFunc(aboutMeImg, "0%")
+        DisplayHide.hideFunc(aboutMeMeta, "3%")
+        DisplayHide.hideFunc(aboutMeImg, "6%")
     }
     // console.log("Offset is ", aboutMeTag.current.offsetTop)
     // console.log("Screen Bottom Y is ", window.scrollY+window.innerHeight);
   };
 
   return (
-    <AboutMeContainer ref={aboutMeContainer}>
+    <AboutMeContainer ref={ref}>
       <AboutMeTag ref={aboutMeTag}>About Me</AboutMeTag>
       <div style={{ display: "flex" }}>
         <AboutMeParagraphContainer ref={aboutMeMeta}>
@@ -123,6 +127,6 @@ const AboutMeSection = () => {
       </div>
     </AboutMeContainer>
   );
-};
+});
 
 export default AboutMeSection;
