@@ -14,7 +14,7 @@
     color: white;
     width: 100%;
     /* font-size: 110%; */
-    font-size: 1.3vw;
+    font-size: calc(1vw + .5vh);
     align-self: center;
     opacity: 0%;
 }
@@ -42,7 +42,7 @@
     transition: all .8s ease-in;
     margin: 1vw;
     color: white;
-    font-size: 1.3vw;
+    font-size: calc(1vw + .5vh);
     background-color: transparent;
     border-width: 0;
     font-weight: 700;

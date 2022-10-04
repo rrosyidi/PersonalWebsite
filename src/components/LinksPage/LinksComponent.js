@@ -10,14 +10,14 @@ const LinkContainer = styled.div({
   marginTop: "25%",
   marginLeft: "20%",
   marginRight: "20%",
-  height: "55vw",
+  height: "calc(33vw + 15vh)",
   marginBottom: "20%",
   // backgroundColor: "black"
 });
 
 const LinkTitle = styled.h1({
   color: "white",
-  fontSize: "2.3vw",
+  fontSize: "calc(1.8vw + .8vh)",
   marginTop: "3%",
 });
 
@@ -33,7 +33,7 @@ const IndividualLinks = styled.div({
   boxShadow: "2px 0px 0px 0px #9200ec",
   borderRadius: "20px",
   width: "20%",
-  height: "10vw",
+  height: "calc(7vw + 2vh)",
   transition: "all .5s ease-in",
   alignItems: "center",
   justifyContent: "center",
@@ -43,7 +43,7 @@ const IndividualLinks = styled.div({
 });
 
 const IndividualImage = styled.img({
-  height: "90%",
+  height: "calc(7vw + 1vh)",
   transition: "all .4s ease-in",
 });
 
@@ -51,7 +51,7 @@ const BodyText = styled.p({
   opacity: "0%",
   color: "white",
   textAlign: "center",
-  fontSize: "1.5vw",
+  fontSize: "calc(1vw + .5vh)",
   marginLeft: "5%",
   transition: "opacity .3s ease-in",
 });

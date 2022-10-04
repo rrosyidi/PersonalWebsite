@@ -4,12 +4,12 @@ import "./style.css";
 
 const hoverAnimation = (ref) => {
   ref.current.style.transition = "all .4s ease";
-  ref.current.style.fontSize = "1.5vw";
+  ref.current.style.fontSize = "calc(1.2vw + .6vh)";
   ref.current.style.cursor = "pointer";
 };
 
 const leaveHoverAnimation = (ref) => {
-  ref.current.style.fontSize = "1.3vw";
+  ref.current.style.fontSize = "calc(1vw + .5vh)";
 };
 
 const scrollToSection = (ref, position) => {
