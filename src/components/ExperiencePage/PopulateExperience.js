@@ -17,7 +17,7 @@ const IndividualSec = styled.div({
 });
 
 const Date = styled.p({
-  fontSize: "1vw",
+  fontSize: "calc(.8vw + .4vh)",
   color: "white",
   alignSelf: "center",
   justifySelf: "center",
@@ -27,7 +27,7 @@ const Date = styled.p({
 const NextLine = styled.hr({
   width: "10%",
   height: "2px",
-  marginLeft: "0%",
+  marginLeft: "2%",
   borderColor: "#9200ec",
   backgroundColor: "#9200ec",
   borderRadius: "40px",
@@ -39,7 +39,7 @@ const ExpHeaderBody = styled.div({
 });
 
 const ExpHeader = styled.p({
-  fontSize: "1.4vw",
+  fontSize: "calc(1vw + .6vh)",
   fontWeight: "bold",
   color: "white",
   marginBottom: "2.5%",
@@ -48,7 +48,7 @@ const ExpHeader = styled.p({
 const ExpBody = styled.li({
   color: "white",
   marginBottom: "2.5%",
-  fontSize: ".9vw",
+  fontSize: "calc(.8vw + .4vh)",
 });
 
 const PopulateExperience = React.forwardRef((props, ref) => {
@@ -69,25 +69,6 @@ const PopulateExperience = React.forwardRef((props, ref) => {
         </ExpHeaderBody>
       </IndividualSec>
     </ListExperience>
-
-    //   <div ref={ref} className="listExperience">
-    //     <div className="individualSec">
-    //       <p className="dates">{props.date}</p>
-    //       <hr className="nextLine indivLine" />
-
-    //       <div className="expHeaderBody">
-    //         <p className="expHeader">
-    //           {props.title}
-    //           {props.company}
-    //         </p>
-    //         {props.meta.map((point, index) => (
-    //           <li className="expBody" key={index}>
-    //             {point}
-    //           </li>
-    //         ))}
-    //       </div>
-    //     </div>
-    //   </div>
   );
 });
 

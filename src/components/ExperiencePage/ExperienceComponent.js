@@ -15,7 +15,7 @@ const ExperienceContainer = styled.div({
 
 const Header = styled.h1({
   color: "white",
-  fontSize: "2.2vw",
+  fontSize: "calc(1.8vw + .8vh)",
   fontWeight: "bolder",
   marginTop: "-4%",
   position: "absolute",
@@ -76,7 +76,7 @@ const ExperienceComponent = React.forwardRef((props, ref) => {
 
   const handleExpScroll = () => {
     if (expTitle.current.offsetTop < window.scrollY + window.innerHeight / 2) {
-        DisplayHide.displayFunc(expTitle, "-3%");
+        DisplayHide.displayFunc(expTitle, "-3.5%");
         setTimeout(() => {
             DisplayHide.displayFunc(exp1, "3%");
             setTimeout(() => {
