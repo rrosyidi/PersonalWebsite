@@ -23,8 +23,10 @@ import EmissionList from "./projectImages/EmissionList.png";
 import CompareFootprint from "./projectImages/CompareFootprint.png";
 
 const ProjectsPageContainer = styled.div({
-  marginLeft: "15%",
-  marginRight: "15%",
+  // marginLeft: "15%",
+  // marginRight: "15%",
+  marginLeft: "calc(5vw + 2vh)",
+  marginRight: "calc(5vw + 2vh)",
   marginTop: "25%",
 //   backgroundColor: "black",
 //   height: "90vh",
@@ -38,7 +40,7 @@ const ProjectTitleContainer = styled.div({
 
 const ProjectsTitle = styled.h1({
   color: "white",
-  fontSize: "2.3vw",
+  fontSize: "calc(1.8vw + .8vh)",
   textAlign: "center",
   marginTop: "3%",
   transition: "all .5s ease-in",

@@ -39,7 +39,7 @@ const ExpHeaderBody = styled.div({
 });
 
 const ExpHeader = styled.p({
-  fontSize: "calc(1vw + .6vh)",
+  fontSize: "calc(1vw + .5vh)",
   fontWeight: "bold",
   color: "white",
   marginBottom: "2.5%",

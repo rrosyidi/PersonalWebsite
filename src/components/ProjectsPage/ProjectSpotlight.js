@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 
 const IndivProject = styled.div({
   width: "30%",
-  height: "41.8vw",
+  height: "calc(38vw + 8vh)",
   backgroundColor: "#232d3a",
   textAlign: "center",
   margin: "2%",
@@ -23,14 +23,14 @@ const HeaderContainer = styled.div({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  top: "0",
+  // top: "0",
   borderTopLeftRadius: "30px",
   borderTopRightRadius: "30px",
 });
 
 const ProjectHeader = styled.h1({
   color: "white",
-  fontSize: "1.3vw",
+  fontSize: "calc(1vw + .5vh)",
   borderRadius: "30px",
   margin: "5%",
 });
@@ -104,8 +104,8 @@ const ProjectButton = styled.button({
   marginTop: "15%",
   backgroundColor: "transparent",
   width: "70%",
-  height: "10%",
-  fontSize: "1vw",
+  height: "12%",
+  fontSize: "calc(.8vw + .35vh)",
   color: "white",
   borderRadius: "40px",
   borderWidth: ".5vw",
@@ -127,7 +127,7 @@ const ProjectSpotlight = React.forwardRef((props, ref) => {
       </HeaderContainer>
 
       <BodyScroll>
-        <ProjBody style={{ wordWrap: "break-word", fontSize: "1vw" }}>
+        <ProjBody style={{ wordWrap: "break-word", fontSize: "calc(.8vw + .35vh)" }}>
           <p>{props.data.mainInfo}</p>
           <FrontImage
             src={props.mainImg}
@@ -137,13 +137,13 @@ const ProjectSpotlight = React.forwardRef((props, ref) => {
           <ProjLine />
 
           {props.data.extraInfo.map((info, index) => (
-            <p style={{ wordWrap: "break-word", fontSize: "1vw" }} key={index}>
+            <p style={{ wordWrap: "break-word", fontSize: "calc(.8vw + .35vh)" }} key={index}>
               {info}
             </p>
           ))}
 
           <ProjLine />
-          <h2 style={{ fontSize: "1.25vw" }}>ScreenShots</h2>
+          <h2 style={{ fontSize: "calc(1vw + .35vh)" }}>ScreenShots</h2>
           <ImageScroll>
             {props.scrollImages.map((img, index) => (
               <SlidingProjectImg
