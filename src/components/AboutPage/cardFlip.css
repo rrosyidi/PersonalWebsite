@@ -7,8 +7,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 13vw;
-    width: 13vw;
+    height: calc(12vw + 4vh);
+    width: calc(12vw + 4vh);
     /* background-color: #bf6bf3; */
     border-radius: 20px;
     background: linear-gradient(135deg, white -25%, #9200ec);
@@ -28,7 +28,7 @@
 }
 
 .frontBackText {
-    font-size: 1vw;
+    font-size: calc(.8vw + .4vh);
     font-weight: bolder;
     letter-spacing: 2px;
     color: white;

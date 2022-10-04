@@ -24,7 +24,7 @@ const TechHeader = styled.h1({
   color: "white",
   display: "flex",
   justifyContent: "center",
-  fontSize: "1.7vw",
+  fontSize: "calc(1.8vw + .8vh)",
   marginTop: "0%",
   transition: "all .5s ease-in",
   opacity: "0%",
