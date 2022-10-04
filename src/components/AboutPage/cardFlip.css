@@ -16,7 +16,7 @@
 }
 
 .img {
-    height: 7vw;
+    height: calc(5.5vw + 3vh);
 }
 
 .imgAndText {
