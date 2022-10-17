@@ -32,8 +32,8 @@ const IndividualLinks = styled.div({
   background: "#232d3a",
   boxShadow: "2px 0px 0px 0px #9200ec",
   borderRadius: "20px",
-  width: "20%",
-  height: "calc(7vw + 2vh)",
+  width: "23%",
+  height: "calc(7vw + 4vh)",
   transition: "all .5s ease-in",
   alignItems: "center",
   justifyContent: "center",
@@ -43,7 +43,7 @@ const IndividualLinks = styled.div({
 });
 
 const IndividualImage = styled.img({
-  height: "calc(7vw + 1vh)",
+  height: "calc(7vw + 2vh)",
   transition: "all .4s ease-in",
 });
 
@@ -166,7 +166,7 @@ const LinksComponent = React.forwardRef((props, ref) => {
             src={res}
             onClick={() =>
               window.open(
-                "https://drive.google.com/file/d/1fCjBWnyzpM0cpLyFzAEqCcXcnThiaizm/view?usp=sharing"
+                "https://drive.google.com/file/d/1SnfEw2peISN-6pFOvtfvzGzpHep1JWoc/view?usp=sharing"
               )
             }
             onMouseEnter={() => (resumeRef.current.style.cursor = "pointer")}
