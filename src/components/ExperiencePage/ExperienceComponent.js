@@ -36,8 +36,9 @@ const ExperienceComponent = React.forwardRef((props, ref) => {
       title: "Software Engineer @ ",
       company: "Publicis Sapient",
       meta: [
-        "Developed and maintained code for the McDonalds website primarily using HTML, CSS, JavaScript, React, and NodeJs.",
-        " Modernized the McDonalds app using technologies such as React Native.",
+        "Worked on the McDonald's VCE team which consists of technologies such as React, Apollo GraphQL, NodeJS, AWS services, and PostgreSQL",
+        "Led the junior engineers within the larger team in regards to the distribution of work and communication with the team lead",
+        "Configured Prometheus for McDonald’s VCE that includes their front-end, back-end, as well as micro-services",
       ],
     },
     {

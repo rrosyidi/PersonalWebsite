@@ -166,7 +166,7 @@ const LinksComponent = React.forwardRef((props, ref) => {
             src={res}
             onClick={() =>
               window.open(
-                "https://drive.google.com/file/d/1SnfEw2peISN-6pFOvtfvzGzpHep1JWoc/view?usp=sharing"
+                "https://drive.google.com/file/d/1ZmYO6iXWFiy5TVzk_1PtpuxLuUuUMgQX/view?usp=sharing"
               )
             }
             onMouseEnter={() => (resumeRef.current.style.cursor = "pointer")}
