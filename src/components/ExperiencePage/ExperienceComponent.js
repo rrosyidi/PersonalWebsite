@@ -39,6 +39,9 @@ const ExperienceComponent = React.forwardRef((props, ref) => {
         "Worked on the McDonald's VCE team which consists of technologies such as React, Apollo GraphQL, NodeJS, AWS services, and PostgreSQL",
         "Led the junior engineers within the larger team in regards to the distribution of work and communication with the team lead",
         "Configured Prometheus for McDonald’s VCE that includes their front-end, back-end, as well as micro-services",
+        "Used terraform to create/connect AWS services such as S3 and API gateway as part of infrastructure",
+        "Regulary updated web applications using HTML, CSS, and Javascript to meet client standards",
+        "Improved code efficiency by as much as 10% by citing redundancy and either removing or modifying them",
       ],
     },
     {

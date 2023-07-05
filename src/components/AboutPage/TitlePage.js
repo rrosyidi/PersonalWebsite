@@ -87,7 +87,7 @@ const TitlePage = () => {
         marginTop={showSubHeading ? "8vh" : "40vh"}
         opac={showSubHeading ? "100%" : "0%"}
       >
-        Full-Stack Software Engineer | Recent New Grad
+        Full-Stack Software Engineer
       </SubHeading>
       <Line opac={showLine ? "100%" : "0%"} />
     </Container>
